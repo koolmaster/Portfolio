@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./assets/scss/helpers/_variables.scss";
+@import "./assets/scss/helpers/_mixins.scss";
+@import "./assets/scss/helpers/_function.scss";
+@import "./assets/scss/helpers/_helpers.scss";
+@import "./assets/scss/base/_reset.scss";
+.section {
+  background-color: color(main-white);
+  @include box-shadow($box-shadow-section);
+  font-family: $font-family;
+  font-size: 1rem;
+  margin-bottom: 80px;
+}
+
+.wrapper {
+  @include display-flex(fgrid);
+}
+
+@include respond-to(mobile-l) {
+  .additional {
+    .chart .circle {
+      width: unset;
+    }
+    .lst-skill .skill-item {
+      text-align: left;
+      width: 50%;
+    }
+  }
+}
+
+@include respond-to(ipad-p) {
+  .content {
+    width: 90%;
+    padding: 80px 0;
+  }
+  .col-8 {
+    margin-top: 0;
+    padding-left: 30px;
+  }
+  .lst2-1 {
+    .item2-1 {
+      width: 50%;
+    }
+  }
+  .col-4 {
+    flex-basis: $width-4;
+  }
+  .col-5 {
+    flex-basis: $width-5;
+  }
+  .col-7 {
+    flex-basis: $width-7;
+  }
+  .col-8 {
+    flex-basis: $width-8;
+  }
+  .timeline {
+    width: 80%;
+    margin: 0 auto;
+    .line-header {
+      margin-left: 160px;
+    }
+    .tree {
+      margin-left: 180px;
+      .branch:before {
+        left: 175px;
+        margin-top: -18px;
+      }
+      .branch-time {
+        position: absolute;
+        left: -20px;
+        margin-top: -30px;
+        width: 175px;
+      }
+    }
+  }
+  .professtional.col-5 {
+    flex-basis: $width-5 - 1;
+  }
+  .additional.col-7 {
+    flex-basis: $width-7 - 1;
+  }
+  .additional {
+    margin-top: 0;
+  }
+}
+
+@include respond-to(ipad-l) {
+  .lst2-1 {
+    .lbl2-6 {
+      &:first-child {
+        width: 70px;
+        margin-bottom: 0px;
+      }
+      &:last-child {
+        width: calc(100% - 70px);
+      }
+    }
+    .item2-1 {
+      height: 35px;
+    }
+  }
+  .professtional,
+  .additional {
+    padding: 0 30px 30px;
+  }
+  .additional {
+    .lst-skill .skill-item {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include respond-to(destop) {
+  .content {
+    width: 1000px;
+  }
+}

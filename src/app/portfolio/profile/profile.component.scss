@@ -1,0 +1,150 @@
+@import "../../../assets/scss/helpers/_variables.scss";
+@import "../../../assets/scss/helpers/_mixins.scss";
+@import "../../../assets/scss/helpers/_function.scss";
+.profile {
+  padding: 15px;
+  @include display-flex();
+}
+
+.lbl2-3 {
+  color: $color-blue;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.lbl2-3b {
+  color: color(main-black);
+}
+
+.col-8 {
+  margin-top: 30px;
+}
+
+.lst2-1 {
+  @include display-flex(fgrid);
+  .item2-1 {
+    width: 100%;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    @extend .lst2-1;
+  }
+  .lbl2-6 {
+    display: inline-block;
+    word-break: break-all;
+    font-family: $font-family;
+    width: 100%;
+    &:first-child {
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.lst-social {
+  @include display-flex();
+  .item-social {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 8px 12px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.lbl2-1 {
+  padding-left: 8px;
+}
+
+.lbl2-2 {
+  font-size: 1.1rem;
+  text-align: center;
+  svg {
+    color: color(primary);
+  }
+  .lbl2-2b {
+    color: color(main-brown);
+  }
+}
+
+.lbl2-4 {
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.lbl2-5 {
+  padding-bottom: 27px;
+  line-height: 28px;
+  color: color(main-black);
+  font-family: $font-letter;
+}
+
+.lbl2-7 {
+  font-weight: 300;
+  margin: 10px 0;
+} // Class img and link
+.img2-1 {
+  display: block;
+  width: 100%;
+  box-shadow: $box-shadow-1;
+  margin-bottom: 20px;
+}
+
+.link2-1 {
+  display: block;
+  margin-bottom: 25px;
+  padding: 15px 5px;
+  box-shadow: $box-shadow-1;
+  transition: all .3s;
+  color: color(main-brown);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+.link2-2 {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  transition: all .2s;
+  color: color(main-brown);
+  border: 1px solid color(main-brown);
+  &:hover {
+    color: color(main-white);
+    border-color: color(primary);
+    background-color: color(primary);
+    box-shadow: 0 0 3px color(primary);
+  }
+}
+
+.lbl2-8 {
+  color: color(primary);
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  letter-spacing: 1.5px;
+}
+
+@include respond-to(mobile-l) {
+  .profile .lbl2-3 {
+    font-size: 2.5rem;
+  }
+}
+
+@include respond-to(ipad-p) {
+  .profile {
+    padding: 33px;
+  }
+}
+
+@include respond-to(ipad-l) {}
+
+@include respond-to(destop) {}

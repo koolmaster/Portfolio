@@ -1,0 +1,51 @@
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@function shadow($key) {
+  @if map-has-key($shadows, $key) {
+    @return map-get($shadows, $key);
+  }
+  @warn "Unknown `#{$key}` in $shadows.";
+  @return null;
+}
+
+@function str-split( $str, $separator: null, $limit: null) {
+  $result: zip(());
+  @if not $separator {
+    @return ($str, );
+  }
+  @if $separator=='' {
+    @for $i from 1 through str-length($str) {
+      $result: append($result, str-slice($str, $i, $i));
+    }
+    @return $result;
+  }
+  $running: true;
+  $progress: $str;
+  $length: str-length($separator);
+  @while $running {
+    $index: str-index($progress, $separator);
+    @if $index {
+      $result: append($result, str-slice($progress, 1, ($index - 1)));
+      $progress: str-slice($progress, ($index + $length));
+    }
+    @else {
+      $running: false;
+    }
+  }
+  $result: append($result, $progress);
+  @if $limit and $limit>0 {
+    $limit: if($limit > length($result), length($result), $limit);
+    $return: ();
+    @for $i from 1 through $limit {
+      $return: append($return, nth($result, $i));
+    }
+    @return $return;
+  }
+  @return $result;
+}

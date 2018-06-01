@@ -1,0 +1,146 @@
+// Sass Mixins
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin align-items($ev) {
+  -webkit-box-align: $ev;
+  -moz-box-align: $ev;
+  -ms-flex-align: $ev;
+  -webkit-align-items: $ev;
+  align-items: $ev;
+}
+
+@mixin display-flex($type: null) {
+  @include flex();
+  @if ($type) {
+    @include align-items(center);
+    @if $type==fwrap {
+      flex-wrap: wrap;
+    }
+    @else if $type==fcenter {
+      align-content: center;
+      justify-content: center;
+    }
+    @else if $type==between {
+      justify-content: space-between;
+    }
+    @else if $type==fgrid {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  @else {
+    justify-content: flex-start;
+    @include align-items(center);
+    flex-wrap: wrap;
+  }
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin list-colors($selector, $colors, $type:null, $child:null) {
+  @each $item in $colors {
+    $i: index($colors, $item);
+    @if $child {
+      .#{$selector}#{":nth-child("}#{length($colors)}#{"n + "}#{$i}#{") "}.#{$child} {
+        @if $type==bg {
+          background-color: $item;
+        }
+        @else {
+          border-left: 3px solid $item;
+        }
+      }
+    }
+    @else {
+      .#{$selector}#{":nth-child("}#{length($colors)}#{"n + "}#{$i}#{")"} {
+        @if $type==bg {
+          background-color: $item;
+        }
+        @else {
+          border-left: 3px solid $item;
+        }
+      }
+    }
+  }
+}
+
+@mixin respond-to($media) {
+  @if $media==mobile-l {
+    @media only screen and (min-width: $mobile-min-landscape) {
+      @content;
+    }
+  }
+  @else if $media==ipad-p {
+    @media only screen and (min-width: $ipad-portrait) {
+      @content;
+    }
+  }
+  @else if $media==ipad-m-l {
+    @media only screen and (min-width: $ipad-mid-landscape) {
+      @content;
+    }
+  }
+  @else if $media==ipad-l {
+    @media only screen and (min-width: $ipad-landscape) {
+      @content;
+    }
+  }
+  @else if $media==destop {
+    @media only screen and (min-width: $destop-medium) {
+      @content;
+    }
+  }
+}
+
+@mixin transition {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@mixin transition-custom($ev) {
+  -webkit-transition: $ev;
+  -moz-transition: $ev;
+  -ms-transition: $ev;
+  -o-transition: $ev;
+  transition: $ev;
+}
+
+@mixin transform-rotate($deg) {
+  -webkit-transform: $deg;
+  -moz-transform: $deg;
+  -ms-transform: $deg;
+  -o-transform: $deg;
+  transform: $deg;
+}
+
+@mixin horizontal-center() {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin layout-card($bg, $padding, $shadow) {
+  background: $bg;
+  padding: $padding;
+  @include box-shadow($shadow);
+}
+
+@mixin bg-blue() {
+  background: $color-blue;
+  color: $color-white;
+}
