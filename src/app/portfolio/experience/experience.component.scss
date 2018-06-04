@@ -1,0 +1,97 @@
+@import "../../../assets/scss/helpers/_variables.scss";
+@import "../../../assets/scss/helpers/_mixins.scss";
+@import "../../../assets/scss/helpers/_function.scss";
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  .line-header {
+    color: color(main-brown);
+    margin-left: 0;
+    display: inline-block;
+    @include layout-card(color(main-white), 13px, $box-shadow-item);
+  }
+  .tree {
+    border-left: 5px solid color(main-white);
+    margin-left: 0;
+    padding-top: 45px;
+    padding-left: 25px;
+    .branch {
+      background-color: color(main-white);
+      margin-bottom: 45px;
+      padding: 30px;
+      @include box-shadow($box-shadow-item);
+      &:before {
+        content: "";
+        background-color: color(primary);
+        position: absolute;
+        left: -5px;
+        margin-top: 12px;
+        width: 14px;
+        height: 14px;
+        @include box-shadow(rgba(0, 0, 0, 0.3) 0px 0px 5px);
+        border-radius: 50%;
+      }
+    }
+    .branch-time {
+      @include bg-blue();
+      display: inline-block;
+      position: static;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      width: 100%;
+      font-size: 1.1rem;
+      text-align: center;
+      @include box-shadow($box-shadow-item);
+    }
+    .branch-job {
+      color: color(primary);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .branch-company {
+      color: color(main-brown);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+    .branch-des {
+      padding-bottom: 27px;
+      line-height: 28px;
+      color: color(main-black);
+      font-family: $font-letter;
+      font-size: 1.2rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@include respond-to(mobile-l) {}
+
+@include respond-to(ipad-p) {
+  .timeline {
+    width: 80%;
+    margin: 0 auto;
+    .line-header {
+      margin-left: 160px;
+    }
+    .tree {
+      margin-left: 180px;
+      .branch:before {
+        left: 175px;
+        margin-top: -18px;
+      }
+      .branch-time {
+        position: absolute;
+        left: -20px;
+        margin-top: -30px;
+        width: 175px;
+      }
+    }
+  }
+}
+
+@include respond-to(ipad-l) {}
+
+@include respond-to(destop) {}

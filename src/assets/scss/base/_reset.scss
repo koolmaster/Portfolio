@@ -23,7 +23,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
    border: 0;
    font-family: $font-family;
    background: #fff;
-   font-size: 12px;
+   font-size: 14px;
    overflow-x: hidden;
    position: relative;
  }
@@ -63,13 +63,13 @@ button {
     border: 0;
     cursor: pointer; }
     
-@media screen and (min-width: 480px) {
-  html {
-    font-size: 13px
-  }
-}
-@media screen and (min-width: 1024px) {
-  html {
-    font-size: 62.5%
-  }
-}
+// @media screen and (min-width: 480px) {
+//   html {
+//     font-size: 13px
+//   }
+// }
+// @media screen and (min-width: 1024px) {
+//   html {
+//     font-size: 62.5%
+//   }
+// }

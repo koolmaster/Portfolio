@@ -1,0 +1,134 @@
+@import "../../../assets/scss/helpers/_variables.scss";
+@import "../../../assets/scss/helpers/_mixins.scss";
+@import "../../../assets/scss/helpers/_function.scss";
+.professtional {
+  @include layout-card(color(main-white), 0 15px 15px, $box-shadow-section);
+  .title2-1 {
+    @include bg-blue();
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1.5px;
+    top: -32px;
+    padding: 18px 27px;
+    @include horizontal-center();
+    @include box-shadow( 0 0 6px rgba(0, 0, 0, .3));
+  }
+  .title-skill {
+    @include display-flex(fgrid);
+    .lbl2-9 {
+      color: color(main-brown);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+  }
+  .process {
+    height: 14px;
+    margin: 5px 0 12px;
+    border-radius: 0px;
+    overflow: hidden;
+    @include box-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    background-color: color(main-brown);
+    .process-bar {
+      display: block;
+      background-color: color(primary);
+      height: 14px;
+      width: 0;
+      float: left;
+      font-size: 1rem;
+      line-height: 20px;
+      color: color(main-white);
+      @include transition-custom(width .6s ease);
+      text-align: center;
+      @include box-shadow(0 0 5px rgba(0, 0, 0, .2));
+    }
+  }
+}
+
+.additional {
+  @extend .professtional;
+  margin-top: 60px;
+  .title2-1 {
+    @extend .title2-1;
+  }
+  .chart {
+    @extend .title-skill;
+    .circle {
+      padding-bottom: 20px;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      .lbl2-10 {
+        font-weight: 100;
+        margin-top: 10px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+    }
+    .percentage {
+      position: absolute;
+      width: 100%;
+      font-size: 1.1rem;
+      color: color(main-brown);
+      top: 50px;
+      left: 2px;
+      font-weight: 500;
+    }
+  }
+  .lst-skill {
+    @include display-flex(fgrid);
+    font-family: $font-letter;
+    padding: 13px 10px 0;
+    .skill-item {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      width: 100%;
+      text-align: center;
+      fa {
+        color: color(primary);
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.professtional.col-5,
+.additional.col-7 {
+  width: col(12);
+}
+
+@include respond-to(mobile-l) {
+  .additional {
+    .chart .circle {
+      width: unset;
+    }
+    .lst-skill .skill-item {
+      text-align: left;
+      width: 50%;
+    }
+  }
+}
+
+@include respond-to(ipad-p) {
+  .professtional.col-5 {
+    flex-basis: col(5) - 1;
+  }
+  .additional.col-7 {
+    flex-basis: col(7) - 1;
+  }
+  .additional {
+    margin-top: 0;
+  }
+}
+
+@include respond-to(ipad-l) {
+  .professtional,
+  .additional {
+    padding: 0 30px 30px;
+  }
+  .additional {
+    .lst-skill .skill-item {
+      font-size: 1.1rem;
+    }
+  }
+}
+

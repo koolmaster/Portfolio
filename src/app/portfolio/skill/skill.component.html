@@ -1,0 +1,83 @@
+<section id="skill">
+  <h2 class="lbl2-8">Skill</h2>
+  <div class="wrapper">
+    <div class="professtional col-5">
+      <h3 class="title2-1">PROFESSIONAL SKILLS</h3>
+      <ul class="lst-skill">
+        <li class="items-skill">
+          <p class="title-skill">
+            <span class="lbl2-9">Html & Css & Sass</span>
+            <span class="lbl2-9">95%</span>
+          </p>
+          <p class="process">
+            <span class="process-bar" style="width: 95%"></span>
+          </p>
+        </li>
+        <li class="items-skill">
+          <p class="title-skill">
+            <span class="lbl2-9">Jquery</span>
+            <span class="lbl2-9">90%</span>
+          </p>
+          <p class="process">
+            <span class="process-bar" style="width: 90%"></span>
+          </p>
+        </li>
+        <li class="items-skill">
+          <p class="title-skill">
+            <span class="lbl2-9">VueJS</span>
+            <span class="lbl2-9">80%</span>
+          </p>
+          <p class="process">
+            <span class="process-bar" style="width: 80%"></span>
+          </p>
+        </li>
+        <li class="items-skill">
+          <p class="title-skill">
+            <span class="lbl2-9">AngularJS & Angular 2</span>
+            <span class="lbl2-9">60%</span>
+          </p>
+          <p class="process">
+            <span class="process-bar" style="width: 60%"></span>
+          </p>
+        </li>
+        <li class="items-skill">
+          <p class="title-skill">
+            <span class="lbl2-9">Photoshop</span>
+            <span class="lbl2-9">90%</span>
+          </p>
+          <p class="process">
+            <span class="process-bar" style="width: 90%"></span>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="additional col-7">
+      <h3 class="title2-1">ADDITIONAL SKILLS</h3>
+      <div class="chart">
+        <div class="circle" *ngFor="let item of arrPie">
+          <div class="percentage">{{item.percent}}%</div>
+          <easy-pie-chart [percent]="item.percent" [options]="options"></easy-pie-chart>
+          <div class="lbl2-10">{{item.name}}</div>
+        </div>
+      </div>
+      <ul class="lst-skill">
+        <li class="skill-item">
+          <fa name="check-circle" fixed="true"></fa>
+          <span class="lbl2-10">Photography</span>
+        </li>
+        <li class="skill-item">
+          <fa name="check-circle" fixed="true"></fa>
+          <span class="lbl2-10">Blend & Retouch</span>
+        </li>
+        <li class="skill-item">
+          <fa name="check-circle" fixed="true"></fa>
+          <span class="lbl2-10">Mobile App & Web Design</span>
+        </li>
+        <li class="skill-item">
+          <fa name="check-circle" fixed="true"></fa>
+          <span class="lbl2-10">UX and UI Design</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

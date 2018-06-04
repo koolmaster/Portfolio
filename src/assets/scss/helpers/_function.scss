@@ -6,12 +6,8 @@
   @return null;
 }
 
-@function shadow($key) {
-  @if map-has-key($shadows, $key) {
-    @return map-get($shadows, $key);
-  }
-  @warn "Unknown `#{$key}` in $shadows.";
-  @return null;
+@function col($columns) {
+  @return unquote((100/$col-count)*$columns+"%");
 }
 
 @function str-split( $str, $separator: null, $limit: null) {

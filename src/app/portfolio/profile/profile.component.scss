@@ -1,13 +1,14 @@
 @import "../../../assets/scss/helpers/_variables.scss";
 @import "../../../assets/scss/helpers/_mixins.scss";
 @import "../../../assets/scss/helpers/_function.scss";
+
 .profile {
   padding: 15px;
   @include display-flex();
 }
 
 .lbl2-3 {
-  color: $color-blue;
+  color: color(primary);
   font-size: 1.7rem;
   text-transform: uppercase;
   padding-bottom: 10px;
@@ -61,7 +62,8 @@
 .lbl2-2 {
   font-size: 1.1rem;
   text-align: center;
-  svg {
+  line-height: 1.2;
+  fa {
     color: color(primary);
   }
   .lbl2-2b {
@@ -79,11 +81,13 @@
   line-height: 28px;
   color: color(main-black);
   font-family: $font-letter;
+  font-size: 1.2rem;
 }
 
 .lbl2-7 {
   font-weight: 300;
   margin: 10px 0;
+  font-size: 1.2rem;
 } // Class img and link
 .img2-1 {
   display: block;
@@ -124,15 +128,6 @@
   }
 }
 
-.lbl2-8 {
-  color: color(primary);
-  text-align: center;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 80px;
-  letter-spacing: 1.5px;
-}
-
 @include respond-to(mobile-l) {
   .profile .lbl2-3 {
     font-size: 2.5rem;
@@ -142,9 +137,33 @@
 @include respond-to(ipad-p) {
   .profile {
     padding: 33px;
+    @include align-items(flex-start);
+  }
+  .lst2-1 {
+    .item2-1 {
+      width: 50%;
+      font-size: 1.1rem;
+    }
+  }
+  .col-8 {
+    margin-top: 0;
+    padding-left: 30px;
   }
 }
 
-@include respond-to(ipad-l) {}
-
-@include respond-to(destop) {}
+@include respond-to(ipad-l) {
+  .lst2-1 {
+    .lbl2-6 {
+      &:first-child {
+        width: 70px;
+        margin-bottom: 0px;
+      }
+      &:last-child {
+        width: calc(100% - 70px);
+      }
+    }
+    .item2-1 {
+      height: 35px;
+    }
+  }
+}
