@@ -26,7 +26,7 @@
     margin: 5px 0 12px;
     border-radius: 0px;
     overflow: hidden;
-    @include box-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    @include box-shadow(0 0 5px rgba(0, 0, 0, 0.4));
     background-color: color(main-brown);
     .process-bar {
       display: block;
@@ -39,7 +39,7 @@
       color: color(main-white);
       @include transition-custom(width .6s ease);
       text-align: center;
-      @include box-shadow(0 0 5px rgba(0, 0, 0, .2));
+      @include box-shadow(0 0 5px rgba(0, 0, 0, .4));
     }
   }
 }
@@ -110,10 +110,12 @@
 
 @include respond-to(ipad-p) {
   .professtional.col-5 {
-    flex-basis: col(5) - 1;
+    flex-basis: 40.66666667%;
+    max-width: 40.66666667%;
   }
   .additional.col-7 {
-    flex-basis: col(7) - 1;
+    flex-basis: 57.33333333%;
+    max-width: 57.33333333%;
   }
   .additional {
     margin-top: 0;
@@ -131,4 +133,3 @@
     }
   }
 }
-

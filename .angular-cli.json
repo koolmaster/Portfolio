@@ -24,7 +24,8 @@
         "./assets/scss/plugin/tootik.scss"
       ],
       "scripts": [
-        "../node_modules/html2canvas/dist/html2canvas.js"
+        "../node_modules/html2canvas/dist/html2canvas.js",
+        "../node_modules/easy-pie-chart/dist/easypiechart.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

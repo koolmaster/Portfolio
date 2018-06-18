@@ -7,7 +7,7 @@
 }
 
 @function col($columns) {
-  @return unquote((100/$col-count)*$columns+"%");
+  @return unquote(((100/$col-count)*$columns)-1+"%");
 }
 
 @function str-split( $str, $separator: null, $limit: null) {
