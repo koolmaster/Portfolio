@@ -1,0 +1,36 @@
+@import "../../../assets/scss/helpers/_variables.scss";
+@import "../../../assets/scss/helpers/_mixins.scss";
+@import "../../../assets/scss/helpers/_function.scss";
+
+.lbl2-2 {
+  font-family: $font-letter;
+  margin-bottom: 35px;
+  line-height: 22px;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.lbl2-8 {
+  margin-bottom: 50px;
+}
+
+.slider {
+  .swiper-slide {
+    background-color: #0487cc;
+    padding-top: 25px;
+    height: 120px !important;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2), 0 0 15px rgba(0, 0, 0, .15);
+  }
+  .img2-1 {
+    max-width: 45px;
+    margin-bottom: 8px;
+  }
+  .lbl2-3 {
+    color: color(main-white);
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}

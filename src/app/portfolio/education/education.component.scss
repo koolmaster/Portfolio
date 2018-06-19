@@ -56,9 +56,16 @@
   }
 }
 
-@include respond-to(mobile-l) {}
+@include respond-to(mobile-l) {
+  .col-4 {
+    flex-basis: 48%;
+    max-width: 48%;
+  }
+}
 
-@include respond-to(ipad-p) {
+@include respond-to(ipad-p) {}
+
+@include respond-to(ipad-l) {
   .box2-1 {
     .period {
       padding: 15px 45px;
@@ -69,7 +76,5 @@
     }
   }
 }
-
-@include respond-to(ipad-l) {}
 
 @include respond-to(destop) {}

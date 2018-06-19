@@ -29,6 +29,7 @@
     "html2canvas": "^1.0.0-alpha.12",
     "jspdf": "^1.4.0",
     "ng2modules-easypiechart": "0.0.4",
+    "ngx-swiper-wrapper": "^6.3.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
