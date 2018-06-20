@@ -1,0 +1,52 @@
+@import "../../../assets/scss/helpers/_variables.scss";
+@import "../../../assets/scss/helpers/_mixins.scss";
+@import "../../../assets/scss/helpers/_function.scss";
+.social {
+  background-color: color(primary);
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2), 0 0 15px rgba(0, 0, 0, .15);
+  position: relative;
+  @include display-flex(fcenter);
+  .link2-1 {
+    display: inline-block;
+    margin: 20px;
+    width: 35px;
+    opacity: .85;
+    transition: all .2s;
+    color: #ffffff;
+    font-size: 1.3rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .btn2-1 {
+    position: absolute;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    background-color: color(primary);
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20);
+    @extend %wave-effect;
+    &:after {
+      @extend %animation-after;
+    }
+    &:hover {
+      color: color(primary);
+      &:after {
+        @extend %animation-hover-after;
+      }
+    }
+  }
+}
+
+@include respond-to(mobile-l) {
+  .social .link2-1 {
+    margin: 30px;
+  }
+}

@@ -6,6 +6,8 @@ import { EasyPieChartModule } from 'ng2modules-easypiechart';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { AppRoutingModule } from '../provider/app-routing/app-routing.module';
 //#region  -- KHAI BÁO COMPONENT --
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -16,7 +18,7 @@ import { EducationComponent } from './portfolio/education/education.component';
 import { ProjectComponent } from './portfolio/project/project.component';
 import { InterestComponent } from './portfolio/interest/interest.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
-
+import { SocialComponent } from './portfolio/social/social.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -42,6 +44,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   }
 };
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,14 +55,17 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     EducationComponent,
     ProjectComponent,
     InterestComponent,
-    ContactComponent
+    ContactComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AngularFontAwesomeModule,
     EasyPieChartModule,
-    SwiperModule
+    SwiperModule,
+    AppRoutingModule,
+    LoadingBarRouterModule
   ],
   providers: [
     {
