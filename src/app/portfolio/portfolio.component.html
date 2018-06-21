@@ -1,10 +1,11 @@
 <div id="portfolio" class="content">
-  <app-profile></app-profile>
-  <app-experience></app-experience>
-  <app-skill></app-skill>
-  <app-education></app-education>
-  <app-project></app-project>
-  <app-interest></app-interest>
-  <app-contact></app-contact>
-  <app-social></app-social>
+  <div #dynamic 
+    infiniteScroll 
+    [infiniteScrollDistance]="1" 
+    [infiniteScrollThrottle]="300"
+    [infiniteScrollDisabled] = "noScroll"
+    (scrolled)="onScroll()" 
+    >
+    <app-profile></app-profile>
+  </div>
 </div>

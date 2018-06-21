@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
       knowledge AngularJS, Angular 4. Strong background in management and leadership.`,
     date: '14/08/1992',
     phone: '0973.001.429',
-    address: '1052/2 Lạc Long Quân Q.Tân Bình',
+    address: '1052/2 Lạc Long Quân Q.TBình',
     email: 'koolmaster1408@gmail.com',
     website: 'www.koolmaster.com',
     nation: 'VietNam',

@@ -7,6 +7,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AppRoutingModule } from '../provider/app-routing/app-routing.module';
 //#region  -- KHAI BÁO COMPONENT --
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { ProjectComponent } from './portfolio/project/project.component';
 import { InterestComponent } from './portfolio/interest/interest.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
 import { SocialComponent } from './portfolio/social/social.component';
+import { DynamicComponentService } from '../provider/sevice/DynamicComponentService';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -65,14 +67,25 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     EasyPieChartModule,
     SwiperModule,
     AppRoutingModule,
-    LoadingBarRouterModule
+    LoadingBarRouterModule,
+    InfiniteScrollModule
   ],
   providers: [
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    DynamicComponentService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ContactComponent,
+    ExperienceComponent,
+    SkillComponent,
+    EducationComponent,
+    ProjectComponent,
+    InterestComponent,
+    SocialComponent
+  ]
 })
 export class AppModule { }
