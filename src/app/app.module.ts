@@ -7,7 +7,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ScrollEventModule } from 'ngx-scroll-event';
 import { AppRoutingModule } from '../provider/app-routing/app-routing.module';
 //#region  -- KHAI BÁO COMPONENT --
 import { AppComponent } from './app.component';
@@ -68,7 +68,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     AppRoutingModule,
     LoadingBarRouterModule,
-    InfiniteScrollModule
+    ScrollEventModule,
   ],
   providers: [
     {

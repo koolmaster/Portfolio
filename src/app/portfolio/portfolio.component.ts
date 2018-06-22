@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, ViewContainerRef, ViewChild } from '@angular/core';
 import { DynamicComponentService } from '../../provider/sevice/DynamicComponentService';
+import { ScrollEvent } from 'ngx-scroll-event';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillComponent } from './skill/skill.component';
 import { EducationComponent } from './education/education.component';
@@ -37,13 +38,18 @@ export class PortfolioComponent implements OnInit {
 
   }
 
-  onScroll() {
-    const component = this.lst.pop();
-    if (component != null) {
-      this.service.setRootViewContainerRef(this.viewContainerRef);
-      this.service.addDynamicComponent(component);
-    } else {
-      this.noScroll = true;
+  public handleScroll(event: ScrollEvent) {
+    if (event.isReachingBottom) {
+      const component = this.lst.pop();
+      if (component != null) {
+        this.service.setRootViewContainerRef(this.viewContainerRef);
+        this.service.addDynamicComponent(component);
+      }
+    }
+    if (event.isReachingTop) {
+    }
+    if (event.isWindowEvent) {
     }
   }
+
 }

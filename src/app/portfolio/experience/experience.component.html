@@ -1,27 +1,15 @@
-<section id="Experience" class="animated fadeInUp">
+<section id="Experience" class="animated fadeInUpBig">
   <h2 class="lbl2-8">Experience</h2>
   <div class="timeline">
     <div class="line-header">
       <fa name="briefcase" fixed="true"></fa>
     </div>
     <ul class="tree">
-      <li class="branch">
-        <span class="branch-time">July 2017 - Current</span>
-        <h3 class="branch-job">Front-End Developer and Web Designer</h3>
-        <p class="branch-company">FPT Infomation System</p>
-        <p class="branch-des">
-          Lorem ipsum dolor sit amet, consectetur adipisci ng elit. In semper lacus tortor, quis bibendum odio mattis vitae. Cras porta
-          massa pretium auctor congue. Suspendisse ante massa, euismod sit amet sem sed, viverra tristique diam.
-        </p>
-      </li>
-      <li class="branch">
-        <span class="branch-time">Jan 2015 - Current</span>
-        <h3 class="branch-job">Wordpress Developer</h3>
-        <p class="branch-company">Haravan</p>
-        <p class="branch-des">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus tortor, quis bibendum odio mattis vitae. Cras porta
-          massa pretium auctor congue. Suspendisse ante massa, euismod sit amet sem sed, viverra tristique diam.
-        </p>
+      <li class="branch" *ngFor="let item of lst">
+        <span class="branch-time">{{item.time}}</span>
+        <h3 class="branch-job">{{item.job}}</h3>
+        <p class="branch-company">{{item.company}}</p>
+        <p class="branch-des">{{item.description}}</p>
       </li>
     </ul>
   </div>

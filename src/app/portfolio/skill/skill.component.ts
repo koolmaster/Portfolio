@@ -8,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class SkillComponent implements OnInit {
   private arrPie: any;
   private options: any;
+  private lstSkill: any;
+  private lstSubSkill: any;
   constructor() {
-    this.arrPie = [
-      { percent: 45, name: 'English' },
-      { percent: 85, name: 'Creativity' },
-      { percent: 78, name: 'Teamwork' }
-    ];
     this.options = {
       barColor: '#747474',
       trackColor: '#fff',
@@ -26,6 +23,27 @@ export class SkillComponent implements OnInit {
         enabled: true
       }
     };
+    this.lstSkill = [
+      { title: 'Html & Css', percentage: '95%' },
+      { title: 'Jquery', percentage: '90%' },
+      { title: 'Sass', percentage: '85%' },
+      { title: 'Angular', percentage: '75%' },
+      { title: 'Vuejs', percentage: '40%' },
+      { title: 'Photoshop', percentage: '90%' },
+    ];
+    this.arrPie = [
+      { percent: 45, name: 'English' },
+      { percent: 85, name: 'Creativity' },
+      { percent: 78, name: 'Teamwork' }
+    ];
+    this.lstSubSkill = [
+      'Photography',
+      'Blend & Retouch',
+      'Mobile App & Web Design',
+      'UX and UI Design',
+      'Mobile developer',
+      'Ionic 1 , 3'
+    ];
   }
 
   ngOnInit() {
