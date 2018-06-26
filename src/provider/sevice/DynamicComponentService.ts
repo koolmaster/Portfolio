@@ -1,5 +1,4 @@
 import { ComponentFactoryResolver, Injectable, Inject } from '@angular/core';
-
 @Injectable()
 export class DynamicComponentService {
     public factoryResolver: any;

@@ -16,6 +16,9 @@
       background-color: color(primary);
       color: #ffffff;
       box-shadow: 0 0 10px rgba(0, 0, 0, .1), 0 0 15px rgba(0, 0, 0, .08);
+      &:hover {
+        background-color: color(primary);
+      }
     }
     &:hover {
       background-color: #ffffff;

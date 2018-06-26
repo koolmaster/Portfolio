@@ -30,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "html2canvas": "^1.0.0-alpha.12",
     "jspdf": "^1.4.0",
+    "mixitup": "^3.3.0",
     "ng2modules-easypiechart": "0.0.4",
     "ngx-infinite-scroll": "^0.8.4",
     "ngx-scroll-event": "^1.0.8",
