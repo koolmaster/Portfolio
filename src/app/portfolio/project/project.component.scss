@@ -6,13 +6,15 @@
   text-align: center;
   @include display-flex();
   .item2-1 {
+    font-family: $font-family;
     color: #757575;
     display: inline-block;
     padding: 10px 20px;
     margin: 0px 7px 14px;
     cursor: pointer;
+    font-size: 1.2rem;
     @include transition-custom(all .8s);
-    &.active {
+    &.mixitup-control-active {
       background-color: color(primary);
       color: #ffffff;
       box-shadow: 0 0 10px rgba(0, 0, 0, .1), 0 0 15px rgba(0, 0, 0, .08);
@@ -28,11 +30,14 @@
 }
 
 .lst2-2 {
-  @include display-flex(fgrid);
-  .item2-2 {
+  @include flex();
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .item2-2,
+  .gap {
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     @include transition-custom(all 0.3s);
     -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20);
     -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10), 0px 1px 6px rgba(0, 0, 0, 0.20);
@@ -49,6 +54,12 @@
         @include transition-custom(all 0.5s 0.2s);
         @include transform-rotate(scale(1));
       }
+    }
+  }
+  .gap {
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
     }
   }
   .img2-1 {
@@ -187,9 +198,6 @@
       padding: 10px 25px;
     }
   }
-  .lst2-2 .item2-2 {
-    margin-bottom: 2%;
-  }
   .col-4 {
     flex-basis: 49%;
     max-width: 49%;
@@ -197,9 +205,10 @@
 }
 
 @include respond-to(ipad-l) {
-  .col-4 {
-    flex-basis: 32.33333333%;
-    max-width: 32.33333333%;
+  .lst2-2 .item2-2,
+  .gap {
+    flex-basis: 32.333333%;
+    max-width: 32.333333%;
   }
 }
 
@@ -210,8 +219,5 @@
   .lst2-2 .group2-1 .row2-1c {
     opacity: 0;
     @include transform-rotate(scale(0));
-  }
-  .lst2-2 .item2-2 {
-    margin-bottom: 1.5%;
   }
 }

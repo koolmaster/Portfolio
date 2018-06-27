@@ -1,24 +1,29 @@
 <section id="Education" class="box animated fadeInUp">
   <h2 class="lbl2-8">Portfolio</h2>
-  <ul class="lst2-1">
-    <button class="item2-1" data-filter="all" [ngClass]="{'active': filterIndex==0}" >All</button>
-    <button class="item2-1" data-filter=".web" [ngClass]="{'active': filterIndex==1}" >Web Design</button>
-    <button class="item2-1" data-filter=".app" [ngClass]="{'active': filterIndex==2}" >App Design</button>
-    <button class="item2-1" data-filter=".dev" [ngClass]="{'active': filterIndex==3}" >Development</button>
-  </ul>
-  <ul class="lst2-2 container">
-    <li class="item2-2 col-4" *ngFor="let item of lstProject; let i = index" [attr.data-myorder]="i + 1" [ngClass]="item.filter">
-      <img class="img2-1" [src]="item.img" alt="">
-      <div class="group2-1">
-        <div class="box2-2">
-          <div class="row2-1">
-            <p class="lbl2-2" *ngFor="let i of item.type">{{i}}</p>
+  <div class="">
+    <ul class="lst2-1">
+      <button class="item2-1 control" data-filter="all">All</button>
+      <button class="item2-1 control" data-filter=".web">Web Design</button>
+      <button class="item2-1 control" data-filter=".app">App Design</button>
+      <button class="item2-1 control" data-filter=".dev">Development</button>
+    </ul>
+    <div class="lst2-2 container">
+      <div class="mix item2-2" *ngFor="let item of lstProject" [ngClass]="item.filter">
+        <img class="img2-1" [src]="item.img" alt="">
+        <div class="group2-1">
+          <div class="box2-2">
+            <div class="row2-1">
+              <p class="lbl2-2" *ngFor="let i of item.type">{{i}}</p>
+            </div>
+            <a class="row2-1b" [href]="item.link">{{item.des}}</a>
+            <a class="row2-1c fa fa-picture-o"></a>
+            <a class="row2-1c style2-1 fa fa-link"></a>
           </div>
-          <a class="row2-1b" [href]="item.link">{{item.des}}</a>
-          <a class="row2-1c fa fa-picture-o"></a>
-          <a class="row2-1c style2-1 fa fa-link"></a>
         </div>
       </div>
-    </li>
-  </ul>
+      <div class="gap"></div>
+      <div class="gap"></div>
+      <div class="gap"></div>
+    </div>
+  </div>
 </section>

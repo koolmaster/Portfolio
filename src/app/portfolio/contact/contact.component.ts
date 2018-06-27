@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  private txtName: String;
-  private txtEmail: String;
-  private txtSubject: any;
-  private txtMessage: any;
+  txtName: String;
+  txtEmail: String;
+  txtSubject: any;
+  txtMessage: any;
   constructor() {
 
   }

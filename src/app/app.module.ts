@@ -22,7 +22,7 @@ import { ContactComponent } from './portfolio/contact/contact.component';
 import { SocialComponent } from './portfolio/social/social.component';
 import { DynamicComponentService } from '../provider/sevice/DynamicComponentService';
 
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   spaceBetween: 30,
   slidesPerView: 6,

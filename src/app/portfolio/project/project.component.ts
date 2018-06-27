@@ -1,57 +1,85 @@
 import { Component, OnInit } from '@angular/core';
+declare var require;
 const mixitup = require('mixitup');
+
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
-  private lstProject: any;
-  private type: any;
-  private filterIndex = 0;
-  private mixer: any;
+  lstProject: any;
+  type: any;
+  mixer: any;
   constructor() {
+
+  }
+
+  ngOnInit() {
     this.lstProject = [
       {
-        img: `http://junaidhira.com/demo/html/tile/img/portfolio/p-1.jpg`,
+        img: `./././assets/img/project/p-1.jpg`,
         des: `Đây là sản phẩm của tui`,
         link: `#`,
         type: ['Angular', 'C#'],
         filter: 'dev'
       },
       {
-        img: `http://junaidhira.com/demo/html/tile/img/portfolio/p-4.jpg`,
+        img: `./././assets/img/project/p-2.jpg`,
         des: `Đây là sản phẩm của tui`,
         link: `#`,
         type: ['Angular', 'C#'],
         filter: 'web'
       },
       {
-        img: `http://junaidhira.com/demo/html/tile/img/portfolio/p-2.jpg`,
+        img: `./././assets/img/project/p-3.jpg`,
         des: `Đây là sản phẩm của tui`,
         link: `#`,
         type: ['Angular', 'C#'],
         filter: 'app'
       },
       {
-        img: `http://junaidhira.com/demo/html/tile/img/portfolio/p-3.jpg`,
+        img: `./././assets/img/project/p-4.jpg`,
         des: `Đây là sản phẩm của tui`,
         link: `#`,
         type: ['Angular', 'C#'],
         filter: 'app'
       },
+      {
+        img: `./././assets/img/project/p-5.jpg`,
+        des: `Đây là sản phẩm của tui`,
+        link: `#`,
+        type: ['Angular', 'C#'],
+        filter: 'web'
+      },
+      {
+        img: `./././assets/img/project/p-6.jpg`,
+        des: `Đây là sản phẩm của tui`,
+        link: `#`,
+        type: ['Angular', 'C#'],
+        filter: 'dev'
+      }
     ];
-
+    setTimeout(() => {
+      const containerEl = document.querySelector('.container');
+      this.mixer = mixitup(containerEl, {
+        animation: {
+          effects: 'fade scale stagger(50ms)'
+        },
+        load: {
+          filter: 'none'
+        }
+      });
+      containerEl.classList.add('mixitup-ready');
+      const self = this;
+      this.mixer.show()
+        .then(function () {
+          self.mixer.configure({
+            animation: {
+              effects: 'fade scale'
+            }
+          });
+        });
+    }, 500);
   }
-
-  ngOnInit() {
-    this.mixer = mixitup('.lst2-2');
-    this.mixer.filter('.web');
-    console.log(this.mixer.filter('.web'));
-  }
-
-  selector($active) {
-    this.filterIndex = $active;
-  }
-
 }

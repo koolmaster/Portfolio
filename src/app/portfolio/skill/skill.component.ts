@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent implements OnInit {
-  private arrPie: any;
-  private options: any;
-  private lstSkill: any;
-  private lstSubSkill: any;
+  arrPie: any;
+  options: any;
+  lstSkill: any;
+  lstSubSkill: any;
   constructor() {
     this.options = {
       barColor: '#747474',
