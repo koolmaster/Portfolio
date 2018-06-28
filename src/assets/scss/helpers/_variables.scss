@@ -4,7 +4,14 @@ sans-serif;
 $font-letter: 'Dosis',
 sans-serif;
 // Color
-$colors: ( primary: #0487cc, main-bg: #efefef, main-black: #000000, main-white: #ffffff, main-brown: #757575);
+$colors: ( 
+  primary: #0487cc, 
+  main-bg: #efefef, 
+  main-black: #000000, 
+  main-white: #ffffff, 
+  main-brown: #757575,
+  color-admin: #34495e
+);
 // Resonsive
 $mobile-min-landscape: 480px;
 $ipad-portrait: 768px;

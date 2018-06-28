@@ -21,6 +21,8 @@ import { InterestComponent } from './portfolio/interest/interest.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
 import { SocialComponent } from './portfolio/social/social.component';
 import { DynamicComponentService } from '../provider/sevice/DynamicComponentService';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './admin/login/login.component';
 
 export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -58,7 +60,10 @@ export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ProjectComponent,
     InterestComponent,
     ContactComponent,
-    SocialComponent
+    SocialComponent,
+    //#region  -- KHAI BÁO ADMIN --
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
