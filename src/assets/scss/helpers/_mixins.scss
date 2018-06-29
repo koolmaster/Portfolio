@@ -19,7 +19,7 @@
   @include flex();
   @if ($type) {
     @include align-items(center);
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     @if $type==fwrap {
       flex-wrap: wrap;
     }
