@@ -1,0 +1,51 @@
+@import "../../../assets/scss/helpers/_variables.scss";
+@import "../../../assets/scss/helpers/_mixins.scss";
+@import "../../../assets/scss/helpers/_function.scss";
+.card {
+  background: #fff;
+  position: relative;
+  border-top: 1px solid #d6d6d6;
+  @include flex();
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  @include box-shadow(0 1px 15px 1px rgba(62, 57, 107, .07));
+  @include transition-custom(all .3s ease-in);
+  &:hover {
+    -webkit-box-shadow: 0 0 25px -5px #9e9c9e;
+    box-shadow: 0 0 25px -5px #9e9c9e;
+  }
+  .card-header {
+    @include display-flex(fgrid);
+    padding: 15px 20px 15px; 
+    border-bottom: 1px solid #d6d6d6;
+  }
+  .fa {
+    @include transition-custom(all .3s ease-in);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+    &.up {
+      @include transform-rotate(rotate(180deg));
+    }
+  }
+  .lbl2-2 {
+    margin-bottom: 0;
+    color: #757575;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

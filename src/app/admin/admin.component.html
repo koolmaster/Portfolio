@@ -1,76 +1,60 @@
-<router-outlet></router-outlet>
 <div class="container">
   <div class="overlay"></div>
   <div class="wrapper">
-    <div class="header-nav">
-      <div class="nav-left">
-        <div class="menu">
-          <a href="javascript:;" class="link2-1 fa fa-bars" aria-hidden="true"></a>
-        </div>
-        <div class="mega-menu">
-          <span class="lbl2-1">
-            Mega
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </span>
-          <ul class="lst-menu">
-            <li class="item2-1 col-3">
-              <h6 class="title2-1">Portfolio</h6>
-              <ul class="lst2-2">
-                <li class="item2-1b">
-                  <a href="#" class="link2-2">Profile</a>
-                </li>
-                <li class="item2-1b">
-                  <a href="#" class="link2-2">Experience</a>
-                </li>
-                <li class="item2-1b">
-                  <a href="#" class="link2-2">Skill</a>
-                </li>
-                <li class="item2-1b">
-                  <a href="#" class="link2-2">Project</a>
-                </li>
-                <li class="item2-1b">
-                  <a href="#" class="link2-2">Blog</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="nav-right">
-        <div class="lang">
-          <span class="lbl2-3">
-            <i class="icon2-2 flag-en"></i>
-            English
-          </span>
-          <ul class="lst-lang">
-            <li class="item2-3">
-              <i class="icon2-2 flag-en"></i>
-              English
-            </li>
-            <li class="item2-3">
-              <i class="icon2-2 flag-vn"></i>
-              Việt Nam
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="contain-nav">
-      <div class="navbar">
-        <div class="main-menu">
-          <div class="item-menu">
-            <p class="lbl2-4">Porfolio</p>
-            <ul class="lst2-4">
-              <a href="#" class="link2-4">
-                <i class="fa fa-user" aria-hidden="true"></i>
+    <div class="navbar">
+      <div class="main-menu">
+        <div class="item-menu" *ngFor="let item of menu">
+          <p class="lbl2-4">{{item.name}}</p>
+          <div class="lst2-4" *ngFor="let child of item.main" [ngClass]="{'open': open == true}">
+            <a *ngIf="!child.haveChild" [routerLinkActive]="['active']" [routerLink]="child.link" class="link2-4">
+              <i [class]="child.icon" aria-hidden="true"></i>
+              {{child.title}}
+              <span class="arrow2-1"></span>
+            </a>
+            <a *ngIf="child.haveChild" [routerLinkActive]="['active']" class="link2-4 have-child" (click)="openAccordion(!open)">
+              <i [class]="child.icon" aria-hidden="true"></i>
+              {{child.title}}
+              <span class="arrow2-1"></span>
+            </a>
+            <ul class="lst-child" *ngIf="child.haveChild">
+              <a href="#" class="link2-5">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
                 Profile
-                <span class="arrow2-1"></span>
               </a>
             </ul>
           </div>
         </div>
       </div>
-      <div class="content"></div>
+    </div>
+    <div class="main-nav">
+      <div class="header-nav">
+        <div class="nav-left">
+          <div class="menu">
+            <a href="javascript:;" class="link2-1 fa fa-bars" aria-hidden="true"></a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="lang">
+            <span class="lbl2-3">
+              <i class="icon2-2 flag-en"></i>
+              English
+            </span>
+            <ul class="lst-lang">
+              <li class="item2-3">
+                <i class="icon2-2 flag-en"></i>
+                English
+              </li>
+              <li class="item2-3">
+                <i class="icon2-2 flag-vn"></i>
+                Việt Nam
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content-nav">
+        <router-outlet><spinner></spinner></router-outlet>
+      </div>
     </div>
   </div>
 </div>

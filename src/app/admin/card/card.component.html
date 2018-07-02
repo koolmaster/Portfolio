@@ -1,0 +1,9 @@
+<div class="card" [ngClass]="cardClass">
+  <div class="card-header">
+    <h5 class="lbl2-2">{{ title }}</h5>
+    <i class="fa fa-angle-down" cardToggleEvent (click)="toggleCard($event)"></i>
+  </div>
+  <div class="card-body" [@cardToggle]="cardToggle">
+    <ng-content></ng-content>
+  </div>
+</div>

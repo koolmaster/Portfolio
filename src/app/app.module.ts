@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -21,8 +22,17 @@ import { InterestComponent } from './portfolio/interest/interest.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
 import { SocialComponent } from './portfolio/social/social.component';
 import { DynamicComponentService } from '../provider/sevice/DynamicComponentService';
+//#region  -- KHAI BÁO COMPONENT ADMIN --
+import { CardToggleDirective } from './admin/card/card-toggle.directive';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './admin/login/login.component';
+import { SpinnerComponent } from './admin/spinner/spinner.component';
+import { ProfileAdminComponent } from './admin/portfolio/profile-admin/profile-admin.component';
+import { ExperienceAdminComponent } from './admin/portfolio/experience-admin/experience-admin.component';
+import { SkillAdminComponent } from './admin/portfolio/skill-admin/skill-admin.component';
+import { ProjectAdminComponent } from './admin/portfolio/project-admin/project-admin.component';
+import { BlogAdminComponent } from './admin/portfolio/blog-admin/blog-admin.component';
+import { CardComponent } from './admin/card/card.component';
 
 export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -62,18 +72,30 @@ export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ContactComponent,
     SocialComponent,
     //#region  -- KHAI BÁO ADMIN --
+    CardToggleDirective,
     AdminComponent,
-    LoginComponent
+    CardComponent,
+    LoginComponent,
+    SpinnerComponent,
+    ProfileAdminComponent,
+    ExperienceAdminComponent,
+    SkillAdminComponent,
+    ProjectAdminComponent,
+    BlogAdminComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     AngularFontAwesomeModule,
     EasyPieChartModule,
     SwiperModule,
     AppRoutingModule,
     LoadingBarRouterModule,
     ScrollEventModule,
+  ],
+  exports: [
+    CardToggleDirective,
   ],
   providers: [
     {
