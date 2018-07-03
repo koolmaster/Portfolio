@@ -21,18 +21,8 @@ import { ProjectComponent } from './portfolio/project/project.component';
 import { InterestComponent } from './portfolio/interest/interest.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
 import { SocialComponent } from './portfolio/social/social.component';
-import { DynamicComponentService } from '../provider/sevice/DynamicComponentService';
-//#region  -- KHAI BÁO COMPONENT ADMIN --
-import { CardToggleDirective } from './admin/card/card-toggle.directive';
-import { AdminComponent } from './admin/admin.component';
-import { LoginComponent } from './admin/login/login.component';
-import { SpinnerComponent } from './admin/spinner/spinner.component';
-import { ProfileAdminComponent } from './admin/portfolio/profile-admin/profile-admin.component';
-import { ExperienceAdminComponent } from './admin/portfolio/experience-admin/experience-admin.component';
-import { SkillAdminComponent } from './admin/portfolio/skill-admin/skill-admin.component';
-import { ProjectAdminComponent } from './admin/portfolio/project-admin/project-admin.component';
-import { BlogAdminComponent } from './admin/portfolio/blog-admin/blog-admin.component';
-import { CardComponent } from './admin/card/card.component';
+import { DynamicComponentService } from '../provider/service/DynamicComponentService';
+import { AdminModule } from './admin/admin.module';
 
 export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -71,19 +61,9 @@ export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     InterestComponent,
     ContactComponent,
     SocialComponent,
-    //#region  -- KHAI BÁO ADMIN --
-    CardToggleDirective,
-    AdminComponent,
-    CardComponent,
-    LoginComponent,
-    SpinnerComponent,
-    ProfileAdminComponent,
-    ExperienceAdminComponent,
-    SkillAdminComponent,
-    ProjectAdminComponent,
-    BlogAdminComponent,
   ],
   imports: [
+    AdminModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -93,9 +73,6 @@ export const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppRoutingModule,
     LoadingBarRouterModule,
     ScrollEventModule,
-  ],
-  exports: [
-    CardToggleDirective,
   ],
   providers: [
     {

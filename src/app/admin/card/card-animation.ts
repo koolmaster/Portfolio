@@ -5,6 +5,7 @@ export const cardToggle = trigger('cardToggle', [
         style({
             overflow: 'hidden',
             height: '0px',
+            padding: '0 1.45rem'
         })
     ),
     state('expanded',

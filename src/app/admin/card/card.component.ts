@@ -11,7 +11,7 @@ import { cardToggle, cardClose } from './card-animation';
 export class CardComponent implements OnInit {
   @Input() title: string;
   @Input() cardClass: string;
-  @Input() classHeader = false;
+  @Input() classGrid = false;
   cardToggle = 'expanded';
   cardClose = 'open';
   constructor() { }

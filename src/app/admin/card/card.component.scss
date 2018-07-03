@@ -4,7 +4,6 @@
 .card {
   background: #fff;
   position: relative;
-  border-top: 1px solid #d6d6d6;
   @include flex();
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -14,7 +13,7 @@
   word-wrap: break-word;
   -webkit-background-clip: border-box;
   background-clip: border-box;
-  border: none;
+  border-top: 4px solid #8cddcd;
   border-radius: 3px;
   margin-bottom: 30px;
   @include box-shadow(0 1px 15px 1px rgba(62, 57, 107, .07));
@@ -25,7 +24,7 @@
   }
   .card-header {
     @include display-flex(fgrid);
-    padding: 15px 20px 15px; 
+    padding: 15px 20px 15px;
     border-bottom: 1px solid #d6d6d6;
   }
   .fa {
@@ -47,5 +46,11 @@
     text-transform: uppercase;
     display: inline-block;
     margin-right: 10px;
+  }
+  .card-body {
+    padding: 1.45rem;
+    &.inline {
+      @include display-flex(fgrid);
+    }
   }
 }

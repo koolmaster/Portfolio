@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 export interface GroupMenu {
   name: string;
   main: MainMenuItems[];
@@ -38,13 +37,8 @@ export class AdminComponent implements OnInit {
   ];
 
   constructor() {
-
   }
 
   ngOnInit() {
-  }
-
-  openAccordion($ele) {
-    this.open = $ele;
   }
 }

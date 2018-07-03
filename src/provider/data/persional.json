@@ -1,0 +1,17 @@
+{
+  "Persional": [
+    {
+      "id": 1,
+      "fullname": "Trinh Quoc Thinh",
+      "career": "web developer & web designer",
+      "dateofbirth": "14/08/1992",
+      "phone": "0973001429",
+      "address": "1052/2 Lac Long Quan Q.TBinh",
+      "email": "koolmaster1408@gmail.com",
+      "website": "www.koolmaster.com",
+      "nationality": "Vietnam",
+      "aboutme": "Hello! I’m Trinh Quoc Thinh. Web Developer with over 2.5 years of experience. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced HTML5, CSS3, JavaScript, jQuery, VueJS, knowledge AngularJS, Angular 4. Strong background in management and leadership."
+    }
+  ],
+  "vn": []
+}

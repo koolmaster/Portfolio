@@ -1,8 +1,46 @@
 <div class="title2-1">Profile</div>
 <div class="wrapper2-1">
   <div class="col-6">
-    <app-card [title]="titleBlock1">
-
+    <app-card [title]="titleBlock1" [classGrid]="true">
+      <div class="form-group col-6">
+        <p class="lbl2-1">Full name</p>
+        <input type="text" class="txt2-1" placeholder="Full name">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Career</p>
+        <input type="text" class="txt2-1" placeholder="Career">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Date of Birth</p>
+        <input type="text" class="txt2-1" placeholder="Career">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Phone</p>
+        <input type="number" class="txt2-1" placeholder="Phone">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Address</p>
+        <input type="text" class="txt2-1" placeholder="Address">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Email</p>
+        <input type="email" placeholder="Email" class="txt2-1">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Website</p>
+        <input type="url" placeholder="http://" class="txt2-1">
+      </div>
+      <div class="form-group col-6">
+        <p class="lbl2-1">Nationality</p>
+        <input type="text" placeholder="Nationality" class="txt2-1">
+      </div>
+      <div class="form-group col-12">
+        <p class="lbl2-1">About me</p>
+        <textarea rows="5" class="txt2-1" placeholder="About me"></textarea>
+      </div>
+      <div class="form-btn col-12">
+        <button type="submit" class="btn2-1" (click)="updateProfile()">Save</button>
+      </div>
     </app-card>
   </div>
   <div class="col-6">
@@ -10,8 +48,13 @@
 
     </app-card>
   </div>
-  <div class="col-12">
+  <div class="col-6">
     <app-card [title]="titleBlock3">
+
+    </app-card>
+  </div>
+  <div class="col-6">
+    <app-card [title]="titleBlock4">
 
     </app-card>
   </div>

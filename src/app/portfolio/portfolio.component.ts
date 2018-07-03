@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, ViewContainerRef, ViewChild } from '@angular/core';
-import { DynamicComponentService } from '../../provider/sevice/DynamicComponentService';
+import { DynamicComponentService } from '../../provider/service/DynamicComponentService';
 import { ScrollEvent } from 'ngx-scroll-event';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillComponent } from './skill/skill.component';
