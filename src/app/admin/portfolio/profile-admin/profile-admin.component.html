@@ -4,39 +4,41 @@
     <app-card [title]="titleBlock1" [classGrid]="true">
       <div class="form-group col-6">
         <p class="lbl2-1">Full name</p>
-        <input type="text" class="txt2-1" placeholder="Full name">
+        <input [(ngModel)]="persional.fullname" type="text" class="txt2-1" placeholder="Full name">
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Career</p>
-        <input type="text" class="txt2-1" placeholder="Career">
+        <input [(ngModel)]="persional.career" type="text" class="txt2-1" placeholder="Career">
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Date of Birth</p>
-        <input type="text" class="txt2-1" placeholder="Career">
+        <input [min]="min" [(ngModel)]="persional.dateofbirth" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" type="text" class="txt2-1"
+          placeholder="Career">
+        <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Phone</p>
-        <input type="number" class="txt2-1" placeholder="Phone">
+        <input [(ngModel)]="persional.phone" type="number" class="txt2-1" placeholder="Phone">
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Address</p>
-        <input type="text" class="txt2-1" placeholder="Address">
+        <input [(ngModel)]="persional.address" type="text" class="txt2-1" placeholder="Address">
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Email</p>
-        <input type="email" placeholder="Email" class="txt2-1">
+        <input [(ngModel)]="persional.email" type="email" placeholder="Email" class="txt2-1">
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Website</p>
-        <input type="url" placeholder="http://" class="txt2-1">
+        <input [(ngModel)]="persional.website" type="url" placeholder="http://" class="txt2-1">
       </div>
       <div class="form-group col-6">
         <p class="lbl2-1">Nationality</p>
-        <input type="text" placeholder="Nationality" class="txt2-1">
+        <input [(ngModel)]="persional.nationality" type="text" placeholder="Nationality" class="txt2-1">
       </div>
       <div class="form-group col-12">
         <p class="lbl2-1">About me</p>
-        <textarea rows="5" class="txt2-1" placeholder="About me"></textarea>
+        <textarea [(ngModel)]="persional.aboutme" rows="5" class="txt2-1" placeholder="About me"></textarea>
       </div>
       <div class="form-btn col-12">
         <button type="submit" class="btn2-1" (click)="updateProfile()">Save</button>
@@ -44,8 +46,21 @@
     </app-card>
   </div>
   <div class="col-6">
-    <app-card [title]="titleBlock2">
-
+    <app-card [title]="titleBlock2" [classGrid]="true">
+      <div class="item2-2 col-12" *ngFor="let item of persional.social">
+        <p class="title2-2 col-12">{{item.name}}</p>
+        <div class="form-group col-6">
+          <p class="lbl2-1">Icon</p>
+          <input [(ngModel)]="item.icon" type="text" class="txt2-1" placeholder="Icon">
+        </div>
+        <div class="form-group col-6">
+          <p class="lbl2-1">Link</p>
+          <input [(ngModel)]="item.link" type="text" class="txt2-1" placeholder="Link">
+        </div>
+      </div>
+      <div class="form-btn col-12">
+        <button type="submit" class="btn2-1" (click)="updateProfile()">Save</button>
+      </div>
     </app-card>
   </div>
   <div class="col-6">

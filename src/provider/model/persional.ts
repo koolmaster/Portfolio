@@ -7,6 +7,13 @@ export class Persional {
     address: string;
     email: string;
     website: string;
-    Nationality: string;
-    Aboutme: string;
+    nationality: string;
+    aboutme: string;
+    social?: Social[];
+}
+
+export class Social {
+    icon: string;
+    name: string;
+    link: string;
 }

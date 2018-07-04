@@ -1,17 +1,48 @@
 {
   "Persional": [
     {
-      "id": 1,
       "fullname": "Trinh Quoc Thinh",
       "career": "web developer & web designer",
-      "dateofbirth": "14/08/1992",
+      "dateofbirth": "1992-08-13T17:00:00.000Z",
       "phone": "0973001429",
       "address": "1052/2 Lac Long Quan Q.TBinh",
       "email": "koolmaster1408@gmail.com",
       "website": "www.koolmaster.com",
       "nationality": "Vietnam",
-      "aboutme": "Hello! I’m Trinh Quoc Thinh. Web Developer with over 2.5 years of experience. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced HTML5, CSS3, JavaScript, jQuery, VueJS, knowledge AngularJS, Angular 4. Strong background in management and leadership."
+      "aboutme": "Hello! I’m Trinh Quoc Thinh. Web Developer with over 2.5 years of experience. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced HTML5, CSS3, JavaScript, jQuery, VueJS, knowledge AngularJS, Angular 4. Strong background in management and leadership.",
+      "social": [
+        {
+          "id": 1,
+          "icon": "facebook",
+          "name": "Facebook",
+          "link": "https: //www.facebook.com/trinh.q.thinh"
+        },
+        {
+          "id": 2,
+          "icon": "facebook-f",
+          "name": "Google +",
+          "link": "https://plus.google.com/105835375917188733153?hl=vi"
+        },
+        {
+          "id": 3,
+          "icon": "instagram",
+          "name": "Instagram",
+          "link": "https://www.instagram.com/koolmaster1408/"
+        },
+        {
+          "id": 4,
+          "icon": "linkedin",
+          "name": "Linkedin",
+          "link": "#"
+        },
+        {
+          "id": 5,
+          "icon": "skype",
+          "name": "Skype",
+          "link": "skype:live:koolmaster140892?chat"
+        }
+      ],
+      "id": 1
     }
-  ],
-  "vn": []
+  ]
 }
