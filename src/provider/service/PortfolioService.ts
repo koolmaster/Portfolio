@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/reduce';
 import 'rxjs/add/operator/catch';
-import { Persional } from '../model/persional';
+import { Persional, Education } from '../model/persional';
 import { Http, Response, RequestOptions } from '@angular/http';
 import { porfolio, porfolioApi } from '../../app/app.contans';
 
@@ -32,5 +32,11 @@ export class PortfolioService {
         };
         localStorage.setItem(porfolio.userLocalStorage, JSON.stringify(param));
         this.http.put(this.urlApi, param).subscribe();
+    }
+    getListEducation(): Observable<Education> {
+        const urlApi = porfolioApi.education;
+        return this.http.get(urlApi).map((res: Response) => {
+            return res.json();
+        }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 }

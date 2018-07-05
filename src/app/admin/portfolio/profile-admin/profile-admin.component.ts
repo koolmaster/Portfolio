@@ -12,20 +12,31 @@ import { DatePipe } from '@angular/common';
 })
 export class ProfileAdminComponent implements OnInit {
   titleBlock1 = 'Profile';
-  titleBlock2 = 'Social';
-  titleBlock3 = 'Education';
-  titleBlock4 = 'Interest';
+  subtitleBlock1 = 'Edit personal information';
+  iconClass1 = 'fa fa-user';
+  titleBlock2 = 'Education';
+  subtitleBlock2 = 'Edit the learning timeline';
+  iconClass2 = 'fa fa-book';
+  titleBlock3 = 'Interest';
+  subtitleBlock3 = 'Edit interest list';
+  iconClass3 = 'fa fa-gamepad';
   persional: Persional;
+  education: any;
   public min = new Date(1992, 7, 14, 0, 0);
   constructor(
     private http: Http,
     private datePipe: DatePipe,
     private portfolioService: PortfolioService
   ) {
-    this.persional = JSON.parse(localStorage.getItem(porfolio.userLocalStorage));
+
   }
 
   ngOnInit() {
+    this.persional = JSON.parse(localStorage.getItem(porfolio.userLocalStorage));
+    this.portfolioService.getListEducation().subscribe((data) => {
+      this.education = data;
+    });
+
   }
 
   updateProfile() {

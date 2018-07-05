@@ -1,7 +1,13 @@
 <div class="card" [ngClass]="cardClass">
   <div class="card-header">
-    <h5 class="lbl2-2">{{ title }}</h5>
-    <i class="fa fa-angle-down" cardToggleEvent (click)="toggleCard($event)"></i>
+    <div class="card-wrapper">
+      <span class="img2-2" [ngClass]="iconClass"></span>
+      <div class="wrapper2-2b">
+        <h5 class="lbl2-2">{{ title }}</h5>
+        <p class="lbl2-2b">{{ subtitle }}</p>
+      </div>
+    </div>
+    <i class="icon2-5 fa fa-angle-down" cardToggleEvent (click)="toggleCard($event)"></i>
   </div>
   <div class="card-body" [@cardToggle]="cardToggle" [ngClass]="{'inline': classGrid}">
     <ng-content></ng-content>

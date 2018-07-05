@@ -17,3 +17,10 @@ export class Social {
     name: string;
     link: string;
 }
+
+export class Education {
+    year: string;
+    level: string;
+    schoolname: string;
+    decription: string;
+}

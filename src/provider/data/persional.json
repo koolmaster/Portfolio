@@ -13,36 +13,59 @@
       "social": [
         {
           "id": 1,
-          "icon": "facebook",
+          "icon": "fa fa-facebook",
           "name": "Facebook",
           "link": "https: //www.facebook.com/trinh.q.thinh"
         },
         {
           "id": 2,
-          "icon": "facebook-f",
+          "icon": "fa fa-google-plus",
           "name": "Google +",
           "link": "https://plus.google.com/105835375917188733153?hl=vi"
         },
         {
           "id": 3,
-          "icon": "instagram",
+          "icon": "fa fa-instagram",
           "name": "Instagram",
           "link": "https://www.instagram.com/koolmaster1408/"
         },
         {
           "id": 4,
-          "icon": "linkedin",
+          "icon": "fa fa-linkedin",
           "name": "Linkedin",
           "link": "#"
         },
         {
           "id": 5,
-          "icon": "skype",
+          "icon": "fa fa-skype",
           "name": "Skype",
           "link": "skype:live:koolmaster140892?chat"
         }
       ],
       "id": 1
+    }
+  ],
+  "Education": [
+    {
+      "id": 1,
+      "year": "2014 - 2016",
+      "level": "Web Master / Web Developer",
+      "schoolname": "Lipro University",
+      "decription": "I completed this degree from this prestigious insitution. I successful completed all the credits without any fallout and got A grade overall."
+    },
+    {
+      "id": 2,
+      "year": "2014 - 2016",
+      "level": "Web Master / Web Developer",
+      "schoolname": "Lipro University",
+      "decription": "I completed this degree from this prestigious insitution. I successful completed all the credits without any fallout and got A grade overall."
+    },
+    {
+      "id": 3,
+      "year": "2014 - 2016",
+      "level": "Web Master / Web Developer",
+      "schoolname": "Lipro University",
+      "decription": "I completed this degree from this prestigious insitution. I successful completed all the credits without any fallout and got A grade overall."
     }
   ]
 }

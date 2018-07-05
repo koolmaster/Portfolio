@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, ElementRef } from '@angular/core';
 import { cardToggle, cardClose } from './card-animation';
 
 @Component({
@@ -10,11 +10,13 @@ import { cardToggle, cardClose } from './card-animation';
 })
 export class CardComponent implements OnInit {
   @Input() title: string;
+  @Input() subtitle: string;
   @Input() cardClass: string;
+  @Input() iconClass: string;
   @Input() classGrid = false;
   cardToggle = 'expanded';
   cardClose = 'open';
-  constructor() { }
+  constructor(private el: ElementRef) { }
 
   ngOnInit() {
   }

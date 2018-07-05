@@ -12,8 +12,7 @@
   min-width: 0;
   word-wrap: break-word;
   -webkit-background-clip: border-box;
-  background-clip: border-box;
-  border-top: 4px solid #8cddcd;
+  background-clip: border-box; // border-top: 4px solid #8cddcd;
   border-radius: 3px;
   margin-bottom: 30px;
   @include box-shadow(0 1px 15px 1px rgba(62, 57, 107, .07));
@@ -24,33 +23,56 @@
   }
   .card-header {
     @include display-flex(fgrid);
-    padding: 15px 20px 15px;
+    padding: 12px 20px 12px;
     border-bottom: 1px solid #d6d6d6;
+    background: #31CA9E;
   }
-  .fa {
+  .icon2-5 {
     @include transition-custom(all .3s ease-in);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
     cursor: pointer;
-    width: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     display: inline-block;
     &.up {
       @include transform-rotate(rotate(180deg));
     }
   }
+  .img2-2 {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 1.65rem;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    color: #1abc9c;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
   .lbl2-2 {
     margin-bottom: 0;
-    color: #757575;
-    font-size: 1rem;
+    color: #fff;
+    margin-bottom: .3rem;
     font-weight: 600;
     text-transform: uppercase;
     display: inline-block;
     margin-right: 10px;
+  }
+  .lbl2-2b {
+    font-size: 0.85rem;
+    color: #fff;
   }
   .card-body {
     padding: 1.45rem;
     &.inline {
       @include display-flex(fgrid);
     }
+  }
+  .card-wrapper {
+    @include display-flex();
   }
 }
