@@ -19,6 +19,7 @@ export class Social {
 }
 
 export class Education {
+    id: string;
     year: string;
     level: string;
     schoolname: string;

@@ -32,7 +32,9 @@ export class ProfileAdminComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.persional = JSON.parse(localStorage.getItem(porfolio.userLocalStorage));
+    this.portfolioService.getProfile().subscribe((data) => {
+      this.persional = data;
+    });
     this.portfolioService.getListEducation().subscribe((data) => {
       this.education = data;
     });
@@ -42,6 +44,10 @@ export class ProfileAdminComponent implements OnInit {
   updateProfile() {
     this.portfolioService.updateProfile(this.persional);
     window.location.reload();
+  }
+
+  updateEducation(data) {
+    this.portfolioService.updateEducation(data);
   }
 
 }

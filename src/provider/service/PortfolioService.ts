@@ -9,15 +9,19 @@ import { porfolio, porfolioApi } from '../../app/app.contans';
 
 @Injectable()
 export class PortfolioService {
-    urlApi = porfolioApi.profile;
     constructor(
         private http: Http,
     ) {
-        this.http.get(this.urlApi).subscribe(data => {
-            localStorage.setItem(porfolio.userLocalStorage, JSON.stringify(data.json()));
-        });
+    }
+    getProfile(): Observable<Persional> {
+        const urlApi = porfolioApi.profile;
+        return this.http.get(urlApi).map((res: Response) => {
+            console.log(res.json());
+            return res.json();
+        }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
     updateProfile(data: Persional) {
+        const urlApi = porfolioApi.profile;
         const param = {
             'fullname': data.fullname,
             'career': data.career,
@@ -31,12 +35,26 @@ export class PortfolioService {
             'social': data.social
         };
         localStorage.setItem(porfolio.userLocalStorage, JSON.stringify(param));
-        this.http.put(this.urlApi, param).subscribe();
+        return this.http.put(urlApi, param).map((res: Response) => {
+            return res.json();
+        }).toPromise();
     }
     getListEducation(): Observable<Education> {
         const urlApi = porfolioApi.education;
         return this.http.get(urlApi).map((res: Response) => {
             return res.json();
         }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+    updateEducation(data: Education) {
+        const urlApi = porfolioApi.education + data.id;
+        const param = {
+            'year': data.year,
+            'level': data.level,
+            'schoolname': data.schoolname,
+            'decription': data.decription
+        };
+        return this.http.put(urlApi, param).map((res: Response) => {
+            return res.json();
+        }).toPromise();
     }
 }
