@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { ActivatedRoute } from '@angular/router';
 import { Persional } from '../../../../provider/model/persional';
 import { PortfolioService } from '../../../../provider/service/PortfolioService';
-import { porfolio } from '../../../app.contans';
 import { DatePipe } from '@angular/common';
-
+import * as nation from '../../../../provider/data/nationality.json';
 @Component({
   selector: 'app-profile-admin',
   templateUrl: './profile-admin.component.html',
@@ -21,24 +21,21 @@ export class ProfileAdminComponent implements OnInit {
   subtitleBlock3 = 'Edit interest list';
   iconClass3 = 'fa fa-gamepad';
   persional: Persional;
-  education: any;
+  nationality: any;
   public min = new Date(1992, 7, 14, 0, 0);
+  collape = -1;
   constructor(
     private http: Http,
     private datePipe: DatePipe,
+    private route: ActivatedRoute,
     private portfolioService: PortfolioService
   ) {
 
   }
 
   ngOnInit() {
-    this.portfolioService.getProfile().subscribe((data) => {
-      this.persional = data;
-    });
-    this.portfolioService.getListEducation().subscribe((data) => {
-      this.education = data;
-    });
-
+    this.persional = this.route.snapshot.data['persional'];
+    this.nationality = nation;
   }
 
   updateProfile() {
@@ -46,8 +43,12 @@ export class ProfileAdminComponent implements OnInit {
     window.location.reload();
   }
 
-  updateEducation(data) {
-    this.portfolioService.updateEducation(data);
+  toggleOpen(temp) {
+    if (temp === this.collape) {
+      this.collape = -1;
+    } else {
+      this.collape = temp;
+    }
   }
 
 }

@@ -13,10 +13,16 @@ export class PortfolioService {
         private http: Http,
     ) {
     }
+    getNationality(): Observable<any> {
+        const urlApi = '../data/nationality.json';
+        return this.http.get(urlApi).map((res: Response) => {
+            console.log(res.json());
+            return res.json();
+        }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
     getProfile(): Observable<Persional> {
         const urlApi = porfolioApi.profile;
         return this.http.get(urlApi).map((res: Response) => {
-            console.log(res.json());
             return res.json();
         }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }

@@ -9,7 +9,7 @@
     </div>
     <i class="icon2-5 fa fa-angle-down" cardToggleEvent (click)="toggleCard($event)"></i>
   </div>
-  <div class="card-body" [@cardToggle]="cardToggle" [ngClass]="{'inline': classGrid}">
+  <div class="card-body" [@cardToggle]="cardToggle" [ngClass]="{'inline': classGrid,'start': !classGrid}">
     <ng-content></ng-content>
   </div>
 </div>

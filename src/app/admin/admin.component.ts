@@ -28,6 +28,7 @@ export class AdminComponent implements OnInit {
       name: 'Porfolio',
       main: [
         { title: 'Profile', icon: 'fa fa-user', haveChild: false, link: 'profile' },
+        { title: 'Education', icon: 'fa fa-book', haveChild: false, link: 'education' },
         { title: 'Experience', icon: 'fa fa-laptop', haveChild: false, link: 'experience' },
         { title: 'Skill', icon: 'fa fa-address-card', haveChild: false, link: 'skill' },
         { title: 'Project', icon: 'fa fa-briefcase', haveChild: false, link: 'project' },

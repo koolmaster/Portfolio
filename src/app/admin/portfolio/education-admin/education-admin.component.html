@@ -1,0 +1,29 @@
+<div class="title2-1">Education</div>
+<div class="wrapper2-1">
+  <div class="col-12">
+    <app-card [title]="titleBlock2" [subtitle]="subtitleBlock2" [iconClass]="iconClass2" [classGrid]="true">
+      <div class="item2-2 col-4" *ngFor="let item of education">
+        <p class="title2-2 col-12">
+          {{item.schoolname}}
+          <span class="icon2-3" (click)="updateEducation(item)">Lưu</span>
+        </p>
+        <div class="form-group col-12">
+          <p class="lbl2-1 style2-1">School name</p>
+          <input [(ngModel)]="item.schoolname" type="text" class="txt2-2" placeholder="Schoolname">
+        </div>
+        <div class="form-group col-12">
+          <p class="lbl2-1 style2-1">Year</p>
+          <input [(ngModel)]="item.year" type="text" class="txt2-2" placeholder="Year">
+        </div>
+        <div class="form-group col-12">
+          <p class="lbl2-1 style2-1">Level</p>
+          <input [(ngModel)]="item.level" type="text" class="txt2-2" placeholder="Level">
+        </div>
+        <div class="form-group col-12">
+          <p class="lbl2-1 style2-1">Decription</p>
+          <textarea [(ngModel)]="item.decription" rows="5" class="txt2-2" placeholder="Decription"></textarea>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>

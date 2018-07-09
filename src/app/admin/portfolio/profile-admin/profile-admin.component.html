@@ -1,7 +1,7 @@
 <div class="title2-1">Profile</div>
 <div class="wrapper2-1">
   <div class="col-12">
-    <app-card [title]="titleBlock1" [subtitle]="subtitleBlock1" [iconClass]="iconClass1" [classGrid]="true">
+    <app-card [title]="titleBlock1" [subtitle]="subtitleBlock1" [iconClass]="iconClass1" [classGrid]="false">
       <div class="form-group col-4">
         <p class="lbl2-1">Full name</p>
         <input [(ngModel)]="persional.fullname" type="text" class="txt2-1" placeholder="Full name">
@@ -34,19 +34,26 @@
       </div>
       <div class="form-group col-4">
         <p class="lbl2-1">Nationality</p>
-        <input [(ngModel)]="persional.nationality" type="text" placeholder="Nationality" class="txt2-1">
+        <input list="national" [(ngModel)]="persional.nationality" type="text" placeholder="Nationality" class="txt2-1">
+        <datalist id="national">
+          <option *ngFor="let item of nationality" [value]="item.en_short_name">
+        </datalist>
       </div>
       <div class="form-group col-12">
         <p class="lbl2-1">About me</p>
         <textarea [(ngModel)]="persional.aboutme" rows="5" class="txt2-1" placeholder="About me"></textarea>
       </div>
       <div class="form-group col-12">
-        <p class="lbl2-1">Social list</p>
+        <p class="lbl2-1 style2-1">Social list</p>
         <div class="lst2-2">
-          <div class="item2-3" *ngFor="let item of persional.social">
-            <div class="wrapper2-2">
+          <div class="item2-3" *ngFor="let item of persional.social,let i = index" [ngClass]="{'open': collape == i}">
+            <div class="wrapper2-2" (click)="toggleOpen(i)">
               <p class="icon2-2" [ngClass]="item.icon"></p>
               <p class="lbl2-3">{{ item.name }}</p>
+            </div>
+            <div class="wraper2-3">
+              <input [(ngModel)]="item.link" type="text" placeholder="link" class="txt2-1">
+              <button class="btn2-2">Save</button>
             </div>
           </div>
         </div>
@@ -57,33 +64,7 @@
     </app-card>
   </div>
   <div class="col-12">
-    <app-card [title]="titleBlock2" [subtitle]="subtitleBlock2" [iconClass]="iconClass2" [classGrid]="true">
-      <div class="item2-2 col-4" *ngFor="let item of education">
-        <p class="title2-2 col-12">
-          {{item.schoolname}}
-          <span class="icon2-3" (click)="updateEducation(item)">Lưu</span>
-        </p>
-        <div class="form-group col-12">
-          <p class="lbl2-1 style2-1">School name</p>
-          <input [(ngModel)]="item.schoolname" type="text" class="txt2-2" placeholder="Schoolname">
-        </div>
-        <div class="form-group col-12">
-          <p class="lbl2-1 style2-1">Year</p>
-          <input [(ngModel)]="item.year" type="text" class="txt2-2" placeholder="Year">
-        </div>
-        <div class="form-group col-12">
-          <p class="lbl2-1 style2-1">Level</p>
-          <input [(ngModel)]="item.level" type="text" class="txt2-2" placeholder="Level">
-        </div>
-        <div class="form-group col-12">
-          <p class="lbl2-1 style2-1">Decription</p>
-          <textarea [(ngModel)]="item.decription" rows="5" class="txt2-2" placeholder="Decription"></textarea>
-        </div>
-      </div>
-    </app-card>
-  </div>
-  <div class="col-12">
-    <app-card [title]="titleBlock3" [subtitle]="subtitleBlock3" [iconClass]="iconClass3" [classGrid]="true">
+    <app-card [title]="titleBlock3" [subtitle]="subtitleBlock3" [iconClass]="iconClass3" [classGrid]="false">
 
     </app-card>
   </div>

@@ -10,6 +10,7 @@ import { ExperienceAdminComponent } from '../../app/admin/portfolio/experience-a
 import { SkillAdminComponent } from '../../app/admin/portfolio/skill-admin/skill-admin.component';
 import { ProjectAdminComponent } from '../../app/admin/portfolio/project-admin/project-admin.component';
 import { BlogAdminComponent } from '../../app/admin/portfolio/blog-admin/blog-admin.component';
+import { AdminResolve } from '../../app/admin/admin.resolve';
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
@@ -19,7 +20,13 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'profile' , pathMatch: 'full'},
       { path: 'login', component: LoginComponent },
-      { path: 'profile', component: ProfileAdminComponent },
+      {
+        path: 'profile',
+        component: ProfileAdminComponent,
+        resolve: {
+          persional: AdminResolve,
+        }
+      },
       { path: 'experience', component: ExperienceAdminComponent },
       { path: 'skill', component: SkillAdminComponent },
       { path: 'project', component: ProjectAdminComponent },

@@ -1,0 +1,43 @@
+ @import "../../../../assets/scss/helpers/_variables.scss";
+ @import "../../../../assets/scss/helpers/_mixins.scss";
+ @import "../../../../assets/scss/helpers/_function.scss";
+ .item2-2 {
+   @include display-flex(fgrid);
+   margin-bottom: 1.5rem;
+   padding: 2rem 1.5rem;
+   border-radius: .4rem;
+   border-top: 4px solid #8cddcd;
+   @include box-shadow( 0 1px 2px 0 rgba(0, 0, 0, 0.2));
+ }
+
+ .title2-2 {
+   font-weight: 600;
+   min-height: 30px;
+   letter-spacing: 1px;
+   color: #2c3e50;
+   border-bottom: 1px solid rgba(204, 204, 204, .35);
+   margin-bottom: 20px;
+   position: relative;
+   padding-right: 66px;
+   line-height: 18px;
+ }
+
+ .txt2-2 {
+   padding: .5rem 1rem .5rem 0;
+   border: none;
+   border-bottom: 1px solid #ddd;
+   border-radius: 0;
+ }
+
+ .form-group {
+   margin-bottom: 1.5rem;
+ }
+
+ .lbl2-1 {
+   display: inline-block;
+   margin-bottom: .5rem;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.45;
+   color: #757575;
+ }
