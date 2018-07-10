@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
 
 import { CardComponent } from './card/card.component';
+import { ModalComponent } from './modal/modal.component';
 import { AccordionGroupComponent } from './accordion/AccordionGroup';
 import { AccordionComponent } from './accordion/Accordion';
 import { AppRoutingModule } from '../../provider/app-routing/app-routing.module';
@@ -22,10 +23,12 @@ import { EducationAdminComponent } from './portfolio/education-admin/education-a
 import { DynamicComponentService } from '../../provider/service/DynamicComponentService';
 import { PortfolioService } from '../../provider/service/PortfolioService';
 import { AdminResolve } from './admin.resolve';
+import { ModalToggleDirective } from './modal/modal-toggle.directive';
 
 @NgModule({
   declarations: [
     CardToggleDirective,
+    ModalToggleDirective,
     AdminComponent,
     CardComponent,
     AccordionComponent,
@@ -37,6 +40,7 @@ import { AdminResolve } from './admin.resolve';
     ProjectAdminComponent,
     BlogAdminComponent,
     EducationAdminComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +54,7 @@ import { AdminResolve } from './admin.resolve';
   ],
   exports: [
     CardToggleDirective,
+    ModalToggleDirective
   ],
   providers: [
     DatePipe,

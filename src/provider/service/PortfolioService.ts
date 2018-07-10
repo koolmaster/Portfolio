@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/reduce';
 import 'rxjs/add/operator/catch';
-import { Persional, Education } from '../model/persional';
+import { Persional, Education, Social } from '../model/persional';
 import { Http, Response, RequestOptions } from '@angular/http';
 import { porfolio, porfolioApi } from '../../app/app.contans';
 
@@ -37,8 +37,25 @@ export class PortfolioService {
             'email': data.email,
             'website': data.website,
             'nationality': data.nationality,
-            'aboutme': data.aboutme,
-            'social': data.social
+            'aboutme': data.aboutme
+        };
+        localStorage.setItem(porfolio.userLocalStorage, JSON.stringify(param));
+        return this.http.put(urlApi, param).map((res: Response) => {
+            return res.json();
+        }).toPromise();
+    }
+    getLinkSocial(): Observable<Social> {
+        const urlApi = porfolioApi.social;
+        return this.http.get(urlApi).map((res: Response) => {
+            return res.json();
+        }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+    updateLinkSocial(data: Social) {
+        const urlApi = porfolioApi.social + data.id;
+        const param = {
+            'icon': data.icon,
+            'name': data.name,
+            'link': data.link
         };
         localStorage.setItem(porfolio.userLocalStorage, JSON.stringify(param));
         return this.http.put(urlApi, param).map((res: Response) => {

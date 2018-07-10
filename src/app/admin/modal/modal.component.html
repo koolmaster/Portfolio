@@ -1,6 +1,8 @@
-<div class="modal">
-    <div class="content">
-        
-    </div>
+<div class="modal style-split" [ngClass]="{'show': modalOpen}">
+  <div class="content">
+    <div class="modal-header">{{modalHeader}}</div>
+    <ng-content></ng-content>
+    <button class="btn2-3 fa fa-times" (click)="closeModal($event)"></button>
+  </div>
 </div>
 <div class="overlay"></div>

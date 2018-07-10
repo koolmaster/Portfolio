@@ -10,39 +10,39 @@
       "website": "www.koolmaster.com",
       "nationality": "Vietnam",
       "aboutme": "Hello, I am Trinh Quoc Thinh. With 2.5 years experience in Frond-end Developer, 1 year in Web and App Mobile for government and health. Have UI, UX skills and know how to upgrade the interface for ease of use, beautiful and modern. Good skills in Html, Css, Jquery, Angular. Know how to make e-commerce web with liquid. High sense of responsibility and quality assurance. Work well, be hard-working, independent and be prepared for new challenges. Always update yourself for new technologies that support your work",
-      "social": [
-        {
-          "id": 1,
-          "icon": "fa fa-facebook",
-          "name": "Facebook",
-          "link": "https: //www.facebook.com/trinh.q.thinh"
-        },
-        {
-          "id": 2,
-          "icon": "fa fa-google-plus",
-          "name": "Google +",
-          "link": "https://plus.google.com/105835375917188733153?hl=vi"
-        },
-        {
-          "id": 3,
-          "icon": "fa fa-instagram",
-          "name": "Instagram",
-          "link": "https://www.instagram.com/koolmaster1408/"
-        },
-        {
-          "id": 4,
-          "icon": "fa fa-linkedin",
-          "name": "Linkedin",
-          "link": "#"
-        },
-        {
-          "id": 5,
-          "icon": "fa fa-skype",
-          "name": "Skype",
-          "link": "skype:live:koolmaster140892?chat"
-        }
-      ],
       "id": 1
+    }
+  ],
+  "social": [
+    {
+      "id": 1,
+      "icon": "fa fa-facebook",
+      "name": "Facebook",
+      "link": "https: //www.facebook.com/trinh.q.thinh"
+    },
+    {
+      "id": 2,
+      "icon": "fa fa-google-plus",
+      "name": "Google +",
+      "link": "https://plus.google.com/105835375917188733153?hl=vi"
+    },
+    {
+      "id": 3,
+      "icon": "fa fa-instagram",
+      "name": "Instagram",
+      "link": "https://www.instagram.com/koolmaster1408/"
+    },
+    {
+      "icon": "fa fa-linkedin",
+      "name": "Linkedin",
+      "link": "#",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "icon": "fa fa-skype",
+      "name": "Skype",
+      "link": "skype:live:koolmaster140892?chat"
     }
   ],
   "Education": [

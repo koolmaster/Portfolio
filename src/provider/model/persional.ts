@@ -9,10 +9,10 @@ export class Persional {
     website: string;
     nationality: string;
     aboutme: string;
-    social?: Social[];
 }
 
 export class Social {
+    id: number;
     icon: string;
     name: string;
     link: string;
