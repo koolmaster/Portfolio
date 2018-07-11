@@ -74,9 +74,28 @@
   }
 }
 
+@mixin list-colors-social($selector, $colors-social, $child:null) {
+  @each $key,
+  $color in $colors-social {
+    .#{$selector}.#{$key} {
+      .#{$child} {
+        background: $color;
+      }
+    }
+  }
+}
+
+@mixin list-modal-social($colors-social) {
+  @each $key,$color in $colors-social {
+    &.#{$key} {
+        background: $color;
+    }
+  }
+}
+
 @mixin list-col() {
   @for $i from 1 through $col-count {
-    .#{$name}-#{$i} {
+    #{$name}-#{$i} {
       flex-basis: col($i);
       max-width: col($i);
     }

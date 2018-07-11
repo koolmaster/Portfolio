@@ -17,7 +17,7 @@ export class ProfileAdminComponent implements OnInit {
   titleBlock3 = 'Interest';
   subtitleBlock3 = 'Edit interest list';
   iconClass3 = 'fa fa-gamepad';
-
+  modalHeader = 'Edit Social List';
   persional: Persional;
   social: Social;
   nationality: any;
@@ -44,9 +44,14 @@ export class ProfileAdminComponent implements OnInit {
     window.location.reload();
   }
 
+  updateSocialItem(data) {
+    this.portfolioService.updateLinkSocialItem(data);
+    window.location.reload();
+  }
+
   updateSocial(data) {
     this.portfolioService.updateLinkSocial(data);
-    window.location.reload();
+    this.openModal();
   }
 
   toggleOpen(temp) {
@@ -58,8 +63,7 @@ export class ProfileAdminComponent implements OnInit {
   }
 
   openModal() {
-    console.log(this.modalOpen);
-    this.modalOpen = true;
+    this.modalOpen = !this.modalOpen;
   }
 
 }

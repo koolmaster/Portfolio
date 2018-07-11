@@ -46,14 +46,16 @@
       <div class="form-group col-12">
         <p class="lbl2-1 style2-1">Social list</p>
         <div class="lst2-2">
-          <div class="item2-3" *ngFor="let item of social,let i = index" [ngClass]="{'open': collape == i}">
-            <div class="wrapper2-2" (click)="toggleOpen(i)">
-              <p class="icon2-2" [ngClass]="item.icon"></p>
-              <p class="lbl2-3">{{ item.name }}</p>
-            </div>
-            <div class="wraper2-3">
-              <input [(ngModel)]="item.link" type="text" placeholder="link" class="txt2-1">
-              <button class="btn2-2" (click)="updateSocial(item)">Save</button>
+          <div class="item-wrapper" *ngFor="let item of social,let i = index">
+            <div class="item2-3" *ngIf="item.status" [class]="item.name" [ngClass]="{'open': collape == i}">
+              <div class="wrapper2-2" (click)="toggleOpen(i)">
+                <p class="icon2-2" [ngClass]="item.icon"></p>
+                <p class="lbl2-3">{{ item.name }}</p>
+              </div>
+              <div class="wraper2-3">
+                <input [(ngModel)]="item.link" type="text" placeholder="link" class="txt2-1">
+                <button class="btn2-2" (click)="updateSocialItem(item)">Save</button>
+              </div>
             </div>
           </div>
           <div class="item2-3 plus" (click)="openModal()">
@@ -73,6 +75,15 @@
     </app-card>
   </div>
 </div>
-<app-modal [modalOpen]="modalOpen" (isShowChange)="openModel($event)">
-  sadasd
+<app-modal [(modalOpen)]="modalOpen" (isModalOpen)="openModal($event)" [modalHeader]="modalHeader">
+  <div class="lst2-social lst2-2">
+    <label class="item2-3" *ngFor="let item of social,let i = index" [ngClass]="{'open': collape == i}">
+      <input type="checkbox" [(ngModel)]="item.status" value="" class="cbo2-2">
+      <div class="wrapper2-2" [ngClass]="item.status ? item.name: '' ">
+        <p class="icon2-2" [ngClass]="item.icon"></p>
+        <p class="lbl2-3">{{ item.name }}</p>
+      </div>
+    </label>
+  </div>
+  <button class="btn2-4" (click)="updateSocial(social)">Save List</button>
 </app-modal>

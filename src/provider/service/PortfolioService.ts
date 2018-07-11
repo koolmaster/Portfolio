@@ -45,22 +45,28 @@ export class PortfolioService {
         }).toPromise();
     }
     getLinkSocial(): Observable<Social> {
-        const urlApi = porfolioApi.social;
+        const urlApi = porfolioApi.social + '?_sort=name&_order=asc';
         return this.http.get(urlApi).map((res: Response) => {
             return res.json();
         }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
-    updateLinkSocial(data: Social) {
+    updateLinkSocialItem(data: Social) {
         const urlApi = porfolioApi.social + data.id;
         const param = {
             'icon': data.icon,
             'name': data.name,
-            'link': data.link
+            'link': data.link,
+            'status': data.status
         };
         localStorage.setItem(porfolio.userLocalStorage, JSON.stringify(param));
         return this.http.put(urlApi, param).map((res: Response) => {
             return res.json();
         }).toPromise();
+    }
+    updateLinkSocial(list: Social[]) {
+        for (let i = 0; i < list.length; i++) {
+            this.updateLinkSocialItem(list[i]);
+        }
     }
     getListEducation(): Observable<Education> {
         const urlApi = porfolioApi.education;

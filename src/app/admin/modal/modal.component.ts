@@ -17,6 +17,6 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    this.isModalOpen.next(false);
+    this.isModalOpen.emit();
   }
 }

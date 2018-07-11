@@ -16,6 +16,7 @@ export class Social {
     icon: string;
     name: string;
     link: string;
+    status: string;
 }
 
 export class Education {
