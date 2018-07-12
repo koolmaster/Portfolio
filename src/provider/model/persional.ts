@@ -1,5 +1,6 @@
 export class Persional {
     id: number;
+    avatar: string;
     fullname: string;
     career: string;
     dateofbirth: string;

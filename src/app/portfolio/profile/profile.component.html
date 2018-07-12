@@ -1,7 +1,7 @@
 <section class="profile section animated fadeInUpBig" #content>
   <div class="col-4">
-    <img [src]="userInfo.avatar" alt="my avatar" class="img2-1">
-    <a [href]="userInfo.linkCV" class="link2-1" target="_self" download>
+    <img src="../../assets/img/avatar.jpg" alt="my avatar" class="img2-1">
+    <a href="#" class="link2-1" target="_self" download>
       <fa name="download" fixed="true"></fa>
       <span class="lbl2-1">Download CV</span>
     </a>
@@ -12,17 +12,17 @@
   </div>
   <div class="col-8">
     <h2 class="lbl2-3">
-      <span class="lbl2-3b">Hi, I'm </span>{{userInfo.name}}</h2>
-    <h3 class="lbl2-4">{{userInfo.job}}</h3>
-    <p class="lbl2-5">{{userInfo.decription}}</p>
+      <span class="lbl2-3b">Hi, I'm </span>{{userInfo.fullname}}</h2>
+    <h3 class="lbl2-4">{{userInfo.career}}</h3>
+    <p class="lbl2-5">{{userInfo.aboutme}}</p>
     <ul class="lst2-1">
       <li class="item2-1">
         <span class="lbl2-6">D.O.B</span>
-        <span class="lbl2-6">{{userInfo.date}}</span>
+        <span class="lbl2-6">{{userInfo.dateofbirth}}</span>
       </li>
       <li class="item2-1">
         <span class="lbl2-6">Phone</span>
-        <a href="tel:0973001429" class="lbl2-6">{{userInfo.phone}}</a>
+        <a href="tel:{{userInfo.phone}}" class="lbl2-6">{{userInfo.phone}}</a>
       </li>
       <li class="item2-1">
         <span class="lbl2-6">Address</span>
@@ -38,12 +38,12 @@
       </li>
       <li class="item2-1">
         <span class="lbl2-6">Nationality</span>
-        <span class="lbl2-6">{{userInfo.nation}}</span>
+        <span class="lbl2-6">{{userInfo.nationality}}</span>
       </li>
     </ul>
     <p class="lbl2-7">Social Link</p>
     <ul class="lst-social">
-      <li class="item-social" *ngFor="let item of userInfo.social">
+      <li class="item-social" *ngFor="let item of social">
         <a [href]="item.link" class="link2-2" [attr.data-tootik]="item.name" data-tootik-conf="square">
           <fa [name]="item.icon" fixed="true"></fa>
         </a>

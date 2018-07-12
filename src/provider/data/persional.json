@@ -1,6 +1,7 @@
 {
   "Persional": [
     {
+      "avatar": "../../assets/img/avatar.jpg",
       "fullname": "Trinh Quoc Thinh",
       "career": "web developer & web designer",
       "dateofbirth": "1992-08-13T17:00:00.000Z",
@@ -9,7 +10,7 @@
       "email": "koolmaster1408@gmail.com",
       "website": "www.koolmaster.com",
       "nationality": "Vietnam",
-      "aboutme": "Hello, I am Trinh Quoc Thinh. With 2.5 years experience in Frond-end Developer, 1 year in Web and App Mobile for government and health. Have UI, UX skills and know how to upgrade the interface for ease of use, beautiful and modern. Good skills in Html, Css, Jquery, Angular. Know how to make e-commerce web with liquid. High sense of responsibility and quality assurance. Work well, be hard-working, independent and be prepared for new challenges. Always update yourself for new technologies that support your work",
+      "aboutme": "My name is Trinh Quoc Thinh : \n- With 2.5 years of experience in Frond-end Developer and 1 year in Web and App Mobile for government and health. \n- Experience with UI, UX and know how to upgrade the interface for ease of use, beautiful and modern. \n- Excellent knowledge of Html, Css, Jquery, Angular. \n- Know how to make e-commerce web with liquid. \n- High sense of responsibility and quality assurance. \n- Good teamwork, hard-working, independent and ready for new challenges.\n- Always learning and using the latest technologies.\nKiva Vy\nMy name is Trinh Quoc Thinh. \n- With 2.5 years of experience in Frond-end Developer and 1 year in Web and App Mobile for government and health. \n- Experience with UI, UX and know how to upgrade the interface for ease of use, beautiful and modern. \n- Excellent knowledge of Html, Css, Jquery, Angular. \n- Know how to make e-commerce web with liquid. \n- High sense of responsibility and quality assurance. \n- Good teamwork, hard-working, independent and ready for new challenges.\n- Always learning and using the latest technologies.",
       "id": 1
     }
   ],
