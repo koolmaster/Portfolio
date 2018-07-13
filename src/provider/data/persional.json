@@ -1,7 +1,6 @@
 {
   "Persional": [
     {
-      "avatar": "../../assets/img/avatar.jpg",
       "fullname": "Trinh Quoc Thinh",
       "career": "web developer & web designer",
       "dateofbirth": "1992-08-13T17:00:00.000Z",
@@ -10,111 +9,111 @@
       "email": "koolmaster1408@gmail.com",
       "website": "www.koolmaster.com",
       "nationality": "Vietnam",
-      "aboutme": "My name is Trinh Quoc Thinh : \n- With 2.5 years of experience in Frond-end Developer and 1 year in Web and App Mobile for government and health. \n- Experience with UI, UX and know how to upgrade the interface for ease of use, beautiful and modern. \n- Excellent knowledge of Html, Css, Jquery, Angular. \n- Know how to make e-commerce web with liquid. \n- High sense of responsibility and quality assurance. \n- Good teamwork, hard-working, independent and ready for new challenges.\n- Always learning and using the latest technologies.\nKiva Vy\nMy name is Trinh Quoc Thinh. \n- With 2.5 years of experience in Frond-end Developer and 1 year in Web and App Mobile for government and health. \n- Experience with UI, UX and know how to upgrade the interface for ease of use, beautiful and modern. \n- Excellent knowledge of Html, Css, Jquery, Angular. \n- Know how to make e-commerce web with liquid. \n- High sense of responsibility and quality assurance. \n- Good teamwork, hard-working, independent and ready for new challenges.\n- Always learning and using the latest technologies.",
+      "aboutme": "- With 2.5 years of experience in Frond-end Developer and 1 year in Web and App Mobile for government and health. \n- Experience with UI, UX and know how to upgrade the interface for ease of use, beautiful and modern. \n- Excellent knowledge of Html, Css, Jquery, Angular. \n- Know how to make e-commerce web with liquid. \n- High sense of responsibility and quality assurance. \n- Good teamwork, hard-working, independent and ready for new challenges.\n- Always learning and using the latest technologies.",
       "id": 1
     }
   ],
   "social": [
     {
-      "icon": "fa fa-facebook",
+      "icon": "facebook",
       "name": "facebook",
       "link": "https: //www.facebook.com/trinh.q.thinh",
       "status": true,
       "id": 1
     },
     {
-      "icon": "fa fa-google-plus",
+      "icon": "google-plus",
       "name": "google +",
       "link": "https://plus.google.com/105835375917188733153?hl=vi",
       "status": true,
       "id": 2
     },
     {
-      "icon": "fa fa-instagram",
+      "icon": "instagram",
       "name": "instagram",
       "link": "https://www.instagram.com/koolmaster1408/",
       "status": true,
       "id": 3
     },
     {
-      "icon": "fa fa-linkedin",
+      "icon": "linkedin",
       "name": "linkedin",
       "link": "#",
       "status": true,
       "id": 4
     },
     {
-      "icon": "fa fa-skype",
+      "icon": "skype",
       "name": "skype",
       "link": "skype:live:koolmaster140892?chat",
       "status": true,
       "id": 5
     },
     {
-      "icon": "fa fa-flickr",
+      "icon": "flickr",
       "name": "flickr",
       "link": "https://www.flickr.com/photos/130626079@N05/",
       "status": false,
       "id": 6
     },
     {
-      "icon": "fa fa-deviantart",
+      "icon": "deviantart",
       "name": "deviantart",
       "link": "#",
       "status": false,
       "id": 7
     },
     {
-      "icon": "fa fa-youtube-play",
+      "icon": "youtube-play",
       "name": "youtube",
       "link": "#",
       "status": false,
       "id": 8
     },
     {
-      "icon": "fa fa-reddit-alien",
+      "icon": "reddit-alien",
       "name": "reddit",
       "link": "#",
       "status": false,
       "id": 9
     },
     {
-      "icon": "fa fa-telegram",
+      "icon": "telegram",
       "name": "telegram",
       "link": "#",
       "status": false,
       "id": 10
     },
     {
-      "icon": "fa fa-pinterest",
+      "icon": "pinterest",
       "name": "pinterest",
       "link": "#",
       "status": false,
       "id": 11
     },
     {
-      "icon": "fa fa-snapchat-ghost",
+      "icon": "snapchat-ghost",
       "name": "snapchat",
       "link": "#",
       "status": false,
       "id": 12
     },
     {
-      "icon": "fa fa-twitter",
+      "icon": "twitter",
       "name": "twitter",
       "link": "#",
       "status": false,
       "id": 13
     },
     {
-      "icon": "fa fa-whatsapp",
+      "icon": "whatsapp",
       "name": "whatsapp",
       "link": "#",
       "status": false,
       "id": 14
     },
     {
-      "icon": "fa fa-volume-control-phone",
+      "icon": "volume-control-phone",
       "name": "viber",
       "link": "#",
       "status": false,

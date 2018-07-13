@@ -49,7 +49,7 @@
           <div class="item-wrapper" *ngFor="let item of social,let i = index">
             <div class="item2-3" *ngIf="item.status" [class]="item.name" [ngClass]="{'open': collape == i}">
               <div class="wrapper2-2" (click)="toggleOpen(i)">
-                <p class="icon2-2" [ngClass]="item.icon"></p>
+                <fa class="icon2-2" [name]="item.icon" fixed="true"></fa>
                 <p class="lbl2-3">{{ item.name }}</p>
               </div>
               <div class="wraper2-3">
@@ -59,8 +59,8 @@
             </div>
           </div>
           <div class="item2-3 plus" (click)="openModal()">
-            <p class="icon2-2 fa fa-plus"></p>
-            <p class="lbl2-4">Add social</p>
+            <fa class="icon2-2" name="pencil" fixed="true"></fa>
+            <p class="lbl2-4">Edit social</p>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
     <label class="item2-3" *ngFor="let item of social,let i = index" [ngClass]="{'open': collape == i}">
       <input type="checkbox" [(ngModel)]="item.status" value="" class="cbo2-2">
       <div class="wrapper2-2" [ngClass]="item.status ? item.name: '' ">
-        <p class="icon2-2" [ngClass]="item.icon"></p>
+        <fa class="icon2-2" [name]="item.icon" fixed="true"></fa>
         <p class="lbl2-3">{{ item.name }}</p>
       </div>
     </label>

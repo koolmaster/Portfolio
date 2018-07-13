@@ -3,7 +3,6 @@ import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import { Persional, Social } from '../../../../provider/model/persional';
 import { PortfolioService } from '../../../../provider/service/PortfolioService';
-import { DatePipe } from '@angular/common';
 import * as nation from '../../../../provider/data/nationality.json';
 @Component({
   selector: 'app-profile-admin',
@@ -18,6 +17,8 @@ export class ProfileAdminComponent implements OnInit {
   subtitleBlock3 = 'Edit interest list';
   iconClass3 = 'fa fa-gamepad';
   modalHeader = 'Edit Social List';
+
+
   persional: Persional;
   social: Social;
   nationality: any;
@@ -26,7 +27,6 @@ export class ProfileAdminComponent implements OnInit {
   collape = -1;
   constructor(
     private http: Http,
-    private datePipe: DatePipe,
     private route: ActivatedRoute,
     private portfolioService: PortfolioService
   ) {

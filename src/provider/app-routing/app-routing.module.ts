@@ -13,7 +13,13 @@ import { BlogAdminComponent } from '../../app/admin/portfolio/blog-admin/blog-ad
 import { AdminResolve } from '../../app/admin/admin.resolve';
 
 const routes: Routes = [
-  { path: '', component: PortfolioComponent },
+  {
+    path: '',
+    component: PortfolioComponent,
+    resolve: {
+      persional: AdminResolve,
+    }
+  },
   {
     path: 'admin',
     component: AdminComponent,

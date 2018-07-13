@@ -4,7 +4,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { CardComponent } from './card/card.component';
 import { ModalComponent } from './modal/modal.component';
@@ -51,6 +52,7 @@ import { ModalToggleDirective } from './modal/modal-toggle.directive';
     FormsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    AngularFontAwesomeModule
   ],
   exports: [
     CardToggleDirective,

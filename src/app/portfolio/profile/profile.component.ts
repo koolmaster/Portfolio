@@ -20,9 +20,10 @@ export class ProfileComponent implements OnInit {
 
   }
 
+
   ngOnInit() {
     // linkCV: '../../../assets/file/TamLyHoc.pdf'
-    this.portfolioService.getProfile().subscribe(data => this.userInfo = data);
+    this.userInfo = this.route.snapshot.data['persional'];
     this.portfolioService.getLinkSocial().subscribe(data => this.social = data);
   }
 

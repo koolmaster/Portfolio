@@ -95,7 +95,7 @@
 
 @mixin list-col() {
   @for $i from 1 through $col-count {
-    #{$name}-#{$i} {
+    .#{$name}-#{$i} {
       flex-basis: col($i);
       max-width: col($i);
     }

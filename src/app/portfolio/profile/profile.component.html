@@ -18,7 +18,7 @@
     <ul class="lst2-1">
       <li class="item2-1">
         <span class="lbl2-6">D.O.B</span>
-        <span class="lbl2-6">{{userInfo.dateofbirth}}</span>
+        <span class="lbl2-6">{{userInfo.dateofbirth | date: 'dd/MM/yyyy'}}</span>
       </li>
       <li class="item2-1">
         <span class="lbl2-6">Phone</span>
@@ -43,10 +43,12 @@
     </ul>
     <p class="lbl2-7">Social Link</p>
     <ul class="lst-social">
-      <li class="item-social" *ngFor="let item of social">
-        <a [href]="item.link" class="link2-2" [attr.data-tootik]="item.name" data-tootik-conf="square">
-          <fa [name]="item.icon" fixed="true"></fa>
-        </a>
+      <li class="wrapper2-4" *ngFor="let item of social">
+        <div class="item-social" *ngIf="item.status">
+          <a [href]="item.link" class="link2-2" [attr.data-tootik]="item.name" data-tootik-conf="square">
+            <fa [name]="item.icon" fixed="true"></fa>
+          </a>
+        </div>
       </li>
     </ul>
   </div>
