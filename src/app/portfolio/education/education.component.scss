@@ -2,7 +2,8 @@
 @import "../../../assets/scss/helpers/_mixins.scss";
 @import "../../../assets/scss/helpers/_function.scss";
 .timeline {
-  @include display-flex(fgrid);
+  @include flex();
+  justify-content: space-between;
 }
 
 .box2-1 {
@@ -50,6 +51,7 @@
     line-height: 28px;
     font-family: $font-letter;
     color: #666;
+    white-space: pre-line;
   }
   .lbl2-10 {
     width: calc(100% - 25px);
