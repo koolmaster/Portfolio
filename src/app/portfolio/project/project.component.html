@@ -7,7 +7,7 @@
       <button class="item2-1 control" data-filter=".app">App Design</button>
       <button class="item2-1 control" data-filter=".dev">Development</button>
     </ul>
-    <div class="lst2-2 container">
+    <div class="lst2-2 container" data-ref="container">
       <div class="mix item2-2" *ngFor="let item of lstProject" [ngClass]="item.filter">
         <img class="img2-1" [src]="item.img" alt="">
         <div class="group2-1">
