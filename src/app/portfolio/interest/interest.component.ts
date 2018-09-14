@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../../../provider/service/PortfolioService';
+import { Interest } from '../../../provider/model/persional';
 
 @Component({
   selector: 'app-interest',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interest.component.scss']
 })
 export class InterestComponent implements OnInit {
-
-  constructor() { }
+  interest: Interest;
+  constructor(
+    private portfolioService: PortfolioService
+  ) { }
 
   ngOnInit() {
+    this.portfolioService.getListInterest().subscribe(data => this.interest = data);
   }
 
 }

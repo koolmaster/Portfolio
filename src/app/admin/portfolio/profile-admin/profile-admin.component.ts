@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
-import { Persional, Social } from '../../../../provider/model/persional';
+import { Persional, Social, Interest } from '../../../../provider/model/persional';
 import { PortfolioService } from '../../../../provider/service/PortfolioService';
 import * as nation from '../../../../provider/data/nationality.json';
 @Component({
@@ -21,6 +21,7 @@ export class ProfileAdminComponent implements OnInit {
 
   persional: Persional;
   social: Social;
+  interest: Interest;
   nationality: any;
   modalOpen = false;
   public min = new Date(1992, 7, 14, 0, 0);
@@ -36,6 +37,7 @@ export class ProfileAdminComponent implements OnInit {
   ngOnInit() {
     this.persional = this.route.snapshot.data['persional'];
     this.portfolioService.getLinkSocial().subscribe(data => this.social = data);
+    this.portfolioService.getListInterest().subscribe(data => this.interest = data);
     this.nationality = nation;
   }
 
@@ -52,6 +54,11 @@ export class ProfileAdminComponent implements OnInit {
   updateSocial(data) {
     this.portfolioService.updateLinkSocial(data);
     this.openModal();
+  }
+
+  updateInterest(data) {
+    this.portfolioService.updateInterest(data);
+    window.location.reload();
   }
 
   toggleOpen(temp) {

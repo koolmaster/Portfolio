@@ -12,8 +12,8 @@
       </div>
       <div class="form-group col-4">
         <p class="lbl2-1">Date of Birth</p>
-        <input [min]="min" [(ngModel)]="persional.dateofbirth" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" type="text" class="txt2-1"
-          placeholder="Career">
+        <input [min]="min" [(ngModel)]="persional.dateofbirth" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" type="text"
+          class="txt2-1" placeholder="Career">
         <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
       </div>
       <div class="form-group col-4">
@@ -41,7 +41,7 @@
       </div>
       <div class="form-group col-12">
         <p class="lbl2-1">About me</p>
-        <textarea [(ngModel)]="persional.aboutme" rows="5" class="txt2-1" placeholder="About me"></textarea>
+        <textarea [(ngModel)]="persional.aboutme" rows="7" class="txt2-1" placeholder="About me"></textarea>
       </div>
       <div class="form-group col-12">
         <p class="lbl2-1 style2-1">Social list</p>
@@ -70,8 +70,23 @@
     </app-card>
   </div>
   <div class="col-12">
-    <app-card [title]="titleBlock3" [subtitle]="subtitleBlock3" [iconClass]="iconClass3" [classGrid]="false">
-
+    <app-card [title]="titleBlock3" [subtitle]="subtitleBlock3" [iconClass]="iconClass3" [classGrid]="false" *ngIf="interest">
+      <div class="form-group col-12">
+        <p class="lbl2-1">Personal preferences</p>
+        <textarea [(ngModel)]="interest.des" rows="7" class="txt2-1" placeholder="Personal preferences"></textarea>
+      </div>
+      <div class="form-group col-12">
+        <p class="lbl2-1 style2-1">Interest list</p>
+        <div class="lst2-2 style2-1">
+          <div class="item2-4" *ngFor="let item of interest.list">
+            <img class="img2-1" [src]="item.icon" [alt]="item.name" />
+            <p class="lbl2-4">{{item.name}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="form-btn col-12">
+        <button type="submit" class="btn2-1" (click)="updateInterest(interest)">Save</button>
+      </div>
     </app-card>
   </div>
 </div>

@@ -20,6 +20,19 @@ export class Social {
     status: string;
 }
 
+// tslint:disable-next-line:class-name
+export class listInterest {
+    id: number;
+    icon: string;
+    name: string;
+}
+
+
+export class Interest {
+    des: string;
+    list: listInterest[];
+}
+
 export class Education {
     id: string;
     year: string;

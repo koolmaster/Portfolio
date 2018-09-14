@@ -120,6 +120,46 @@
       "id": 15
     }
   ],
+  "interest": {
+    "des": "I have so many hobbies like playing games, soccer, gym, listening to music and photography. Underground music and role-playing games make me relaxed after working. Besides, I go to the gym everyday to have better health. I also spend the whole weekend for photography because I really love to capture meaningful moments of people around me.",
+    "list": [
+      {
+        "icon": "../../../assets/img/interest/travel.png",
+        "name": "Travel",
+        "id": 1
+      },
+      {
+        "icon": "../../../assets/img/interest/music.png",
+        "name": "Music",
+        "id": 2
+      },
+      {
+        "icon": "../../../assets/img/interest/gaming.png",
+        "name": "Gaming",
+        "id": 3
+      },
+      {
+        "icon": "../../../assets/img/interest/movies.png",
+        "name": "Movies",
+        "id": 4
+      },
+      {
+        "icon": "../../../assets/img/interest/photography.png",
+        "name": "Photography",
+        "id": 5
+      },
+      {
+        "icon": "../../../assets/img/interest/gym.png",
+        "name": "Gym",
+        "id": 6
+      },
+      {
+        "icon": "../../../assets/img/interest/football.png",
+        "name": "Football",
+        "id": 7
+      }
+    ]
+  },
   "Education": [
     {
       "year": "2007 -  2010",
@@ -141,6 +181,11 @@
       "schoolname": "Informatics Center for University",
       "decription": "I completed his degree from this prestigious institution. I successfully completed all the credits without any fallout and got A grade overall.",
       "id": 3
+    }
+  ],
+  "Message": [
+    {
+      
     }
   ]
 }

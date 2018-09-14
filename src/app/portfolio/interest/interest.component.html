@@ -1,39 +1,11 @@
-<section id="Education" class="box animated fadeInUp">
+<section id="Education" class="box animated fadeInUp" *ngIf="interest">
   <h2 class="lbl2-8">Interest</h2>
-  <p class="lbl2-2">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  </p>
- <!-- [config]="config" [(index)]="index" -->
+  <p class="lbl2-2">{{interest.des}}</p>
+  <!-- [config]="config" [(index)]="index" -->
   <swiper class="slider">
-    <div class="group2-1">
-      <img class="img2-1" src="../../../assets/img/interest/travel.png" alt="Travel" />
-      <h4 class="lbl2-3">Travel</h4>
-    </div>
-    <div>
-      <img class="img2-1" src="../../../assets/img/interest/music.png" alt="Music" />
-      <h4 class="lbl2-3">Music</h4>
-    </div>
-    <div>
-      <img class="img2-1" src="../../../assets/img/interest/gaming.png" alt="Gaming" />
-      <h4 class="lbl2-3">Gaming</h4>
-    </div>
-    <div>
-      <img class="img2-1" src="../../../assets/img/interest/movies.png" alt="Movies" />
-      <h4 class="lbl2-3">Movies</h4>
-    </div>
-    <div>
-      <img class="img2-1" src="../../../assets/img/interest/photography.png" alt="Photography" />
-      <h4 class="lbl2-3">Photography</h4>
-    </div>
-    <div>
-      <img class="img2-1" src="../../../assets/img/interest/gym.png" alt="Gym" />
-      <h4 class="lbl2-3">Gym</h4>
-    </div>
-    <div>
-      <img class="img2-1" src="../../../assets/img/interest/football.png" alt="Football" />
-      <h4 class="lbl2-3">Football</h4>
+    <div class="group2-1" *ngFor="let item of interest.list">
+      <img class="img2-1" [src]="item.icon" [alt]="item.name" />
+      <h4 class="lbl2-3">{{item.name}}</h4>
     </div>
   </swiper>
 </section>

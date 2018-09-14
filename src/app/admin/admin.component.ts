@@ -32,7 +32,7 @@ export class AdminComponent implements OnInit {
         { title: 'Experience', icon: 'fa fa-laptop', haveChild: false, link: 'experience' },
         { title: 'Skill', icon: 'fa fa-address-card', haveChild: false, link: 'skill' },
         { title: 'Project', icon: 'fa fa-briefcase', haveChild: false, link: 'project' },
-        { title: 'Blog', icon: 'fa fa-rss', haveChild: false, link: 'blog' }
+        { title: 'Message', icon: 'fa fa-commenting', haveChild: false, link: 'blog' }
       ]
     }
   ];
